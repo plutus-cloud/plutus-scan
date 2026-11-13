@@ -718,3 +718,12 @@ test('a gh login token is never written to any output, error or log', async () =
   const html = readFileSync(join(live.tmpDir, 'plutus-scan', 'report-2026-10-28.html'), 'utf8');
   assert.ok(!html.includes(GH_TOKEN_VALUE));
 });
+
+test('escape sequences in a note or error never reach the terminal', async () => {
+  // A path is the easiest untrusted text to put into a source note: the same writes carry
+  // provider error bodies and aws CLI stderr.
+  const r = await run([...END, '--no-aws', '--focus', '\x1b]0;owned\x07\x1b[31mmissing.csv']);
+  assert.notEqual(r.code, 0);
+  assert.ok(r.stderr.includes('missing.csv'), r.stderr);
+  assert.ok(!/[\x1b\x07]/.test(r.stderr), JSON.stringify(r.stderr));
+});

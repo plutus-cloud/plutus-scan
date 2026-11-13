@@ -15,7 +15,7 @@ import { ghRunner, ghToken } from './sources/github-auth.js';
 import { fetchDemo } from './sources/demo.js';
 import { buildReport } from './report/data.js';
 import { awsRequestLine } from './report/headline.js';
-import { renderTerminal } from './report/terminal.js';
+import { renderTerminal, sanitize } from './report/terminal.js';
 import { renderMarkdown } from './report/markdown.js';
 import { renderHtml } from './report/html.js';
 import { VERSION } from './version.js';
@@ -355,10 +355,10 @@ export async function main(argv, { env = process.env, stdout = process.stdout, s
   } catch (e) {
     ctx.view?.stop(); // the live panel comes down before the error is written
     if (e instanceof UsageError) {
-      stderr.write(`plutus-scan: ${e.message}\nRun plutus-scan --help for usage.\n`);
+      stderr.write(`plutus-scan: ${sanitize(e.message)}\nRun plutus-scan --help for usage.\n`);
       return 2;
     }
-    stderr.write(`plutus-scan: ${String(e instanceof Error ? e.message : e).split('\n')[0]}\n`);
+    stderr.write(`plutus-scan: ${sanitize(String(e instanceof Error ? e.message : e).split('\n')[0])}\n`);
     return 1;
   }
 }
@@ -416,7 +416,9 @@ async function run(argv, { env, stdout, stderr, stdin, transport, open, tmpDir, 
     stats: () => ({ requests: t.log.length, billed: t.billedCount(), cost: t.billedCount() * AWS_REQUEST_COST }),
   }) : noProgress();
   ctx.view = view;
-  const say = (/** @type {string} */ line) => { if (!live) stderr.write(`${line}\n`); };
+  // Notes and errors can carry text from a provider, the aws CLI or a FOCUS file, so control
+  // characters and escape sequences are stripped before they reach the terminal.
+  const say = (/** @type {string} */ line) => { if (!live) stderr.write(`${sanitize(line)}\n`); };
   // The demo is instant, so on the live panel it pauses a little per step to be watchable.
   const pace = live && o.demo ? () => delay(DEMO_STEP_MS) : async () => {};
   const ok = (/** @type {string} */ name, /** @type {import('./ui/progress.js').SourceHandle} */ line, /** @type {SourceResult} */ result) => {
@@ -544,7 +546,7 @@ async function run(argv, { env, stdout, stderr, stdin, transport, open, tmpDir, 
   // report follows to carry them.
   if (configured === 0 || failed === configured) {
     view.finish();
-    if (live) for (const note of notes) stderr.write(`${note}\n`);
+    if (live) for (const note of notes) stderr.write(`${sanitize(note)}\n`);
   }
   if (configured === 0) {
     stderr.write(`${NO_SOURCES}\n`);
