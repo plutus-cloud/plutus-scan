@@ -1,0 +1,24 @@
+◆ plutus-scan  1 Overview  [2 Drivers]  3 Anomalies      2026-08-02 → 2026-10-30
+Drivers  2026-10-01 → 2026-10-30 vs the previous 30                         1/10
+  Service                                      Change  Share         Trend
+› AWS Amazon Relational Database Service      +$1,476  ██████ 41.3%  ▁▁▁▁▄███
+  AWS Amazon Elastic Compute Cloud              +$819  ███▍   22.9%  ▁▃▄▆▆▇▇█
+  AWS EC2 - Other                               +$397  █▋     11.1%  ▁▁▂▂▂▂█▂
+  AWS Amazon Simple Storage Service             +$246  █       6.9%  ▁▃▄▄▅▆▇█
+  AWS Amazon Elastic Compute Cloud purchases    -$140  ▋       3.9%  █▁▁▁█▁▁▁
+  AWS Tax                                       +$121  ▌       3.4%  █▁▁▁█▁▁▁
+  AWS Amazon CloudFront                       +$80.98  ▍       2.3%  ▁▁▂▄▄▅▇█
+  OpenAI OpenAI API                           +$74.00  ▎       2.1%  ▁▂▃▄▅▇▆█
+  Anthropic Claude API                        +$72.15  ▎       2.0%  ▁▂▃▄▅▅▆█
+  AWS AWS Lambda                              +$67.07  ▎       1.9%  ▁▃▃▄▅▆▆█
+
+╭─ AWS Amazon Relational Database Service · enter for detail ──────── 60 days ─╮
+│  $218 │                                  █▆▇▇▇█▇█▇█▆██▇▇▆▆▇▆▇▇█▇██▇          │
+│       │▇▆▆▇▆▆▇▆▇▆▆▆▇▆▇▆▇▇▇▇▇▇▆▇▇▇▆▆▇█▆▆▇▆██████████████████████████          │
+│       │████████████████████████████████████████████████████████████          │
+│ $0.00 │████████████████████████████████████████████████████████████          │
+│       └────────────────────────────────────────────────────────────          │
+│        2026-09-01               2026-09-30               2026-10-30          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+←→ tabs  ↑↓/jk move  enter open  esc back  h html  q quit

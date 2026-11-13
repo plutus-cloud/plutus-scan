@@ -1,0 +1,62 @@
+plutus-scan 0.1.0  2026-08-02 to 2026-10-30 (90 days)
+
+Headline
+Last 30 days: $49,733 ($40,500 cloud, $7,800 commitments, $1,433 AI), +7% vs the
+previous 30. Biggest mover: AWS Amazon Relational Database Service /
+InstanceUsage:db.r6g.xlarge +$1,476. Projected October total: $51,326.
+Last 30 days    $49,733 (cloud $40,500, commitments $7,800, AI $1,433)
+Previous 30     $46,450, change +$3,283 (+7%)
+Top movers      AWS Amazon Relational Database Service / InstanceUsage:db.r6g.x…
+                AWS Amazon Elastic Compute Cloud / BoxUsage:m7g.xlarge +$819
+                AWS EC2 - Other / NatGateway-Bytes +$397
+Largest anomaly +$291 on 2026-10-17, AWS EC2 - Other
+Month-end       $51,326 projected for 2026-10
+
+Daily spend
+▁▁▁▂▁▁▁▂▁▂▂▁▁▂▁▁▂▁█▁▂▁▂▂▁▁▂▂▂▂▂▂▂▂▂▂▂▂▂▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▃▂▂▃▂▂▃▂▂▂▃▂▃▃▃▃▂▂▃▃▃▃
+2026-08-02 to 2026-10-30, peak $3,583 a day
+
+Top drivers (last 30 days against the previous 30)
+AWS Amazon Relational Database Service                                   +$1,476
+  USE1-InstanceUsage:db.r6g.xlarge                                       +$1,476
+AWS Amazon Elastic Compute Cloud                                           +$819
+  USE1-BoxUsage:m7g.xlarge                                                 +$817
+  CPUCredits:t3                                                           +$1.39
+AWS EC2 - Other                                                            +$397
+  USE1-NatGateway-Bytes                                                    +$330
+  USE1-EBS:SnapshotUsage                                                 +$14.96
+  EUW2-EBS:SnapshotUsage                                                  +$7.99
+AWS Amazon Simple Storage Service                                          +$246
+  USE1-TimedStorage-ByteHrs                                                +$246
+AWS Amazon Elastic Compute Cloud purchases                                 -$140
+
+Anomalies
+2026-10-17 AWS EC2 - Other                                                 +$291
+
+Candidates to review
+Often worth changing
+gp2 volumes                                                      $259 in 30 days
+  gp3 is usually about 20% cheaper
+  If this is waste, Plutus can open the pull request that fixes it.
+Classic Load Balancer traffic                                  $94.24 in 30 days
+  Classic is the previous generation of load balancer
+Idle public IPs                                                $75.08 in 30 days
+  Billed while attached to nothing
+Burstable CPU credit charges                                   $41.64 in 30 days
+  Billed when unlimited-mode T instances run above baseline
+Worth a look
+S3 Standard storage                                            $3,124 in 30 days
+  Data that is rarely read can sit in a cheaper class
+  https://plutus-cloud.com/?utm_source=plutus-scan&utm_medium=cli
+  and 15 more, listed in --json and the HTML report
+
+AI by project
+OpenAI support-bot                                                        $1,600
+Anthropic support-bot                                                     $1,591
+OpenAI search-assist                                                        $673
+
+Notes and basis
+Demo data: synthetic spend for Example Corp, a fictional company. No account was
+read.
+FOCUS: BilledCost, including credit and tax rows when present.
+Last complete day: 2026-10-30. Currency: USD.

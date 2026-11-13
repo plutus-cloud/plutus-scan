@@ -1,0 +1,76 @@
+[95m◆[0m [1mplutus-scan 0.1.0[0m                      [90m2026-08-02 → 2026-10-30 · 90 days · USD[0m
+
+[1mLast 30 days: $49,733 ($40,500 cloud, $7,800 commitments, $1,433 AI), +7% vs the[0m
+[1mprevious 30.[0m
+[1mBiggest mover: AWS Amazon Relational Database Service /[0m
+[1mInstanceUsage:db.r6g.xlarge +$1,476.[0m
+[1mProjected October total: $51,326.[0m
+
+[90m╭[0m[90m─[0m [1m[95mLast 30 days[0m[0m [90m───[0m[90m╮[0m [90m╭[0m[90m─[0m [1m[95mChange[0m[0m [90m────────[0m[90m╮[0m [90m╭[0m[90m─[0m [1m[95mForecast[0m[0m [90m──────[0m[90m╮[0m [90m╭[0m[90m─[0m [1m[95mCommitments[0m[0m [90m───[0m[90m╮[0m
+[90m│[0m [1m$49,733[0m          [90m│[0m [90m│[0m [1m[91m▲ +$3,283[0m[0m       [90m│[0m [90m│[0m [1m$51,326[0m         [90m│[0m [90m│[0m [1m$7,800[0m          [90m│[0m
+[90m│[0m [94m▄▁▇▇▄▅▇▆▆█▇▅▆▇█[0m  [90m│[0m [90m│[0m [91m+7% vs before[0m   [90m│[0m [90m│[0m [90mOctober total[0m   [90m│[0m [90m│[0m [90m16% of spend[0m    [90m│[0m
+[90m│[0m [94m████████████[0m[33m██[0m[35m█[0m  [90m│[0m [90m│[0m [90mwas $46,450[0m     [90m│[0m [90m│[0m [90m$49,733 so far[0m  [90m│[0m [90m│[0m [90mlast 30 days[0m    [90m│[0m
+[90m╰[0m[90m──────────────────[0m[90m╯[0m [90m╰[0m[90m─────────────────[0m[90m╯[0m [90m╰[0m[90m─────────────────[0m[90m╯[0m [90m╰[0m[90m─────────────────[0m[90m╯[0m
+[90m╭[0m[90m─[0m [1m[95mDaily spend[0m[0m [90m─────────────────────────────────[0m [90mpeak $3,583 · avg $1,524/day[0m [90m─[0m[90m╮[0m
+[90m│[0m [90m$3,583[0m [90m│[0m                                                                     [90m│[0m
+[90m│[0m [90m      [0m [90m│[0m                                                                     [90m│[0m
+[90m│[0m [90m      [0m [90m│[0m               [35m▄[0m                                                     [90m│[0m
+[90m│[0m [90m$1,792[0m [90m│[0m               [33m█[0m                                                     [90m│[0m
+[90m│[0m [90m      [0m [90m│[0m               [33m█[0m       [36m▞▞▞[0m  [36m▞▞▞[0m  [36m▞▞▞▞[0m [36m▞▞▞▞[0m  [36m▞▞▞[0m  [36m▞▞▞▞[0m [36m▞▞▞▞▞▞▞▞▞[0m [36m▞▞▞▞[0m [90m│[0m
+[90m│[0m [90m      [0m [90m│[0m[33m▅[0m[35m▇[0m[94m███[0m[33m▅[0m[35m▇[0m[33m▇[0m[94m██[0m[35m▅▅[0m[94m█[0m[33m█[0m[94m█[0m[33m█[0m[35m▆[0m[94m████[0m[35m▆[0m[94m████[0m[33m██[0m[94m███[0m[33m██[0m[94m████[0m[33m█[0m[94m████[0m[33m██[0m[94m███[0m[33m██[0m[94m███████████████████[0m [90m│[0m
+[90m│[0m [90m      [0m [90m│[0m[94m████████████████████████████████████████████████████████████████████[0m [90m│[0m
+[90m│[0m [90m $0.00[0m [90m│[0m[94m████████████████████████████████████████████████████████████████████[0m [90m│[0m
+[90m│[0m        [90m└[0m                                                         [91m▲[0m           [90m│[0m
+[90m│[0m         [90m2026-08-02                   2026-09-15                   2026-10-30[0m [90m│[0m
+[90m│[0m [94m■[0m cloud   [33m■[0m commitments   [35m■[0m AI   [36m▞[0m monthly charges, spread   [91m▲[0m anomaly       [90m│[0m
+[90m╰[0m[90m──────────────────────────────────────────────────────────────────────────────[0m[90m╯[0m
+[90m╭[0m[90m─[0m [1m[95mTop movers[0m[0m [90m─────────────────────────────────────────────────────────────────[0m[90m╮[0m
+[90m│[0m [91m▲[0m AWS Amazon Relational Database Service / InstanceUsage:db.r6g.xl…  [91m+$1,476[0m [90m│[0m
+[90m│[0m [91m▲[0m AWS Amazon Elastic Compute Cloud / BoxUsage:m7g.xlarge             [91m  +$819[0m [90m│[0m
+[90m│[0m [91m▲[0m AWS EC2 - Other / NatGateway-Bytes                                 [91m  +$397[0m [90m│[0m
+[90m│[0m                                                                              [90m│[0m
+[90m│[0m Largest anomaly [91m+$291[0m on 2026-10-17, AWS EC2 - Other                         [90m│[0m
+[90m╰[0m[90m──────────────────────────────────────────────────────────────────────────────[0m[90m╯[0m
+[90m╭[0m[90m─[0m [1m[95mTop drivers[0m[0m [90m──────────────────────────────[0m [90mlast 30 days vs the previous 30[0m [90m─[0m[90m╮[0m
+[90m│[0m [90mService                                      Change  Share         Trend[0m     [90m│[0m
+[90m│[0m [1mAWS Amazon Relational Database Service[0m      [91m+$1,476[0m  [35m██████[0m 41.3%  [94m▁▁▁▁▄███[0m  [90m│[0m
+[90m│[0m [90m  ↳ USE1-InstanceUsage:db.r6g.xlarge[0m        [91m+$1,476[0m                          [90m│[0m
+[90m│[0m [1mAWS Amazon Elastic Compute Cloud[0m              [91m+$819[0m  [35m███▍  [0m 22.9%  [94m▁▃▄▆▆▇▇█[0m  [90m│[0m
+[90m│[0m [90m  ↳ USE1-BoxUsage:m7g.xlarge[0m                  [91m+$817[0m                          [90m│[0m
+[90m│[0m [90m  ↳ CPUCredits:t3[0m                            [91m+$1.39[0m                          [90m│[0m
+[90m│[0m [1mAWS EC2 - Other[0m                               [91m+$397[0m  [35m█▋    [0m 11.1%  [94m▁▁▂▂▂▂█▂[0m  [90m│[0m
+[90m│[0m [90m  ↳ USE1-NatGateway-Bytes[0m                     [91m+$330[0m                          [90m│[0m
+[90m│[0m [90m  ↳ USE1-EBS:SnapshotUsage[0m                  [91m+$14.96[0m                          [90m│[0m
+[90m│[0m [90m  ↳ EUW2-EBS:SnapshotUsage[0m                   [91m+$7.99[0m                          [90m│[0m
+[90m│[0m [1mAWS Amazon Simple Storage Service[0m             [91m+$246[0m  [35m█     [0m  6.9%  [94m▁▃▄▄▅▆▇█[0m  [90m│[0m
+[90m│[0m [90m  ↳ USE1-TimedStorage-ByteHrs[0m                 [91m+$246[0m                          [90m│[0m
+[90m│[0m [1mAWS Amazon Elastic Compute Cloud purchases[0m    [92m-$140[0m  [35m▋     [0m  3.9%  [94m█▁▁▁█▁▁▁[0m  [90m│[0m
+[90m╰[0m[90m──────────────────────────────────────────────────────────────────────────────[0m[90m╯[0m
+[90m╭[0m[90m─[0m [1m[95mAnomalies[0m[0m [90m──────────────────────────────────────────────────────────────────[0m[90m╮[0m
+[90m│[0m [90mDate        Service          Change  Severity[0m                                [90m│[0m
+[90m│[0m [90m2026-10-17[0m  AWS EC2 - Other   [91m+$291[0m  [91m● high[0m                                  [90m│[0m
+[90m╰[0m[90m──────────────────────────────────────────────────────────────────────────────[0m[90m╯[0m
+[90m╭[0m[90m─[0m [1m[95mCandidates to review[0m[0m [90m───────────────────────────────────────────────────────[0m[90m╮[0m
+[90m│[0m [90mCandidate                      30 days  Why[0m                                  [90m│[0m
+[90m│[0m [90mOften worth changing[0m                                                         [90m│[0m
+[90m│[0m [1mgp2 volumes[0m                       $259  [90mgp3 is usually about 20% cheaper[0m     [90m│[0m
+[90m│[0m [90m  Plutus can open the fix as a pull request[0m                                  [90m│[0m
+[90m│[0m [1mClassic Load Balancer traffic[0m   $94.24  [90mClassic is the previous generation …[0m [90m│[0m
+[90m│[0m [1mIdle public IPs[0m                 $75.08  [90mBilled while attached to nothing[0m     [90m│[0m
+[90m│[0m [1mBurstable CPU credit charges[0m    $41.64  [90mBilled when unlimited-mode T instan…[0m [90m│[0m
+[90m│[0m [90mWorth a look[0m                                                                 [90m│[0m
+[90m│[0m [1mS3 Standard storage[0m             $3,124  [90mData that is rarely read can sit in…[0m [90m│[0m
+[90m│[0m [90m  https://plutus-cloud.com/?utm_source=plutus-scan&utm_medium=cli[0m            [90m│[0m
+[90m│[0m [90m  and 15 more, listed in --json and the HTML report[0m                          [90m│[0m
+[90m╰[0m[90m──────────────────────────────────────────────────────────────────────────────[0m[90m╯[0m
+[90m╭[0m[90m─[0m [1m[95mAI by project[0m[0m [90m──────────────────────────────────────────────────────────────[0m[90m╮[0m
+[90m│[0m [90mProject                  Cost  Share[0m                                         [90m│[0m
+[90m│[0m OpenAI support-bot     $1,600  [35m████████[0m 41.4%                                [90m│[0m
+[90m│[0m Anthropic support-bot  $1,591  [35m████████[0m 41.2%                                [90m│[0m
+[90m│[0m OpenAI search-assist     $673  [35m███▍    [0m 17.4%                                [90m│[0m
+[90m╰[0m[90m──────────────────────────────────────────────────────────────────────────────[0m[90m╯[0m
+
+[90mLast complete day: 2026-10-30. Currency: USD.[0m
+[90mFOCUS: BilledCost, including credit and tax rows when present.[0m
+[90mDemo data: synthetic spend for Example Corp, a fictional company. No account was[0m
+[90mread.[0m

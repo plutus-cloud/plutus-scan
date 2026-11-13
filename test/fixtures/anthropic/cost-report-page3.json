@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "starting_at": "2026-10-03T00:00:00Z",
+      "ending_at": "2026-10-04T00:00:00Z",
+      "results": [
+        {
+          "amount": "123.45",
+          "currency": "usd",
+          "description": "Model Beta Usage - Input Tokens",
+          "model": "model-beta",
+          "cost_type": "tokens",
+          "workspace_id": "wrkspc_01",
+          "token_type": "uncached_input_tokens"
+        }
+      ]
+    }
+  ],
+  "has_more": false,
+  "next_page": null
+}

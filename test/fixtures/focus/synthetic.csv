@@ -1,0 +1,632 @@
+BilledCost,BillingCurrency,ChargePeriodStart,ChargePeriodEnd,ChargeCategory,ProviderName,ServiceName,SubAccountId,SubAccountName,ChargeDescription,Tags,x_UsageType
+200.00,USD,2026-07-31T00:00:00Z,2026-08-01T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.00,USD,2026-07-31T00:00:00Z,2026-08-01T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.00,USD,2026-07-31T00:00:00Z,2026-08-01T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+40.00,USD,2026-07-31T00:00:00Z,2026-08-01T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+120.00,USD,2026-07-31T00:00:00Z,2026-08-01T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.00,USD,2026-07-31T00:00:00Z,2026-08-01T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+60.00,USD,2026-07-31T00:00:00Z,2026-08-01T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+200.80,USD,2026-08-01T00:00:00Z,2026-08-02T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.08,USD,2026-08-01T00:00:00Z,2026-08-02T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.06,USD,2026-08-01T00:00:00Z,2026-08-02T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+40.16,USD,2026-08-01T00:00:00Z,2026-08-02T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+120.48,USD,2026-08-01T00:00:00Z,2026-08-02T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.12,USD,2026-08-01T00:00:00Z,2026-08-02T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+60.24,USD,2026-08-01T00:00:00Z,2026-08-02T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+201.60,USD,2026-08-02T00:00:00Z,2026-08-03T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.16,USD,2026-08-02T00:00:00Z,2026-08-03T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.12,USD,2026-08-02T00:00:00Z,2026-08-03T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+40.32,USD,2026-08-02T00:00:00Z,2026-08-03T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+120.96,USD,2026-08-02T00:00:00Z,2026-08-03T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.24,USD,2026-08-02T00:00:00Z,2026-08-03T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+60.48,USD,2026-08-02T00:00:00Z,2026-08-03T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+202.40,USD,2026-08-03T00:00:00Z,2026-08-04T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.24,USD,2026-08-03T00:00:00Z,2026-08-04T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.18,USD,2026-08-03T00:00:00Z,2026-08-04T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+40.48,USD,2026-08-03T00:00:00Z,2026-08-04T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+121.44,USD,2026-08-03T00:00:00Z,2026-08-04T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.36,USD,2026-08-03T00:00:00Z,2026-08-04T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+60.72,USD,2026-08-03T00:00:00Z,2026-08-04T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+203.20,USD,2026-08-04T00:00:00Z,2026-08-05T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.32,USD,2026-08-04T00:00:00Z,2026-08-05T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.24,USD,2026-08-04T00:00:00Z,2026-08-05T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+40.64,USD,2026-08-04T00:00:00Z,2026-08-05T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+121.92,USD,2026-08-04T00:00:00Z,2026-08-05T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.48,USD,2026-08-04T00:00:00Z,2026-08-05T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+60.96,USD,2026-08-04T00:00:00Z,2026-08-05T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+204.00,USD,2026-08-05T00:00:00Z,2026-08-06T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.40,USD,2026-08-05T00:00:00Z,2026-08-06T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.30,USD,2026-08-05T00:00:00Z,2026-08-06T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+40.80,USD,2026-08-05T00:00:00Z,2026-08-06T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+122.40,USD,2026-08-05T00:00:00Z,2026-08-06T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.60,USD,2026-08-05T00:00:00Z,2026-08-06T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+61.20,USD,2026-08-05T00:00:00Z,2026-08-06T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+204.80,USD,2026-08-06T00:00:00Z,2026-08-07T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.48,USD,2026-08-06T00:00:00Z,2026-08-07T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.36,USD,2026-08-06T00:00:00Z,2026-08-07T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+40.96,USD,2026-08-06T00:00:00Z,2026-08-07T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+122.88,USD,2026-08-06T00:00:00Z,2026-08-07T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.72,USD,2026-08-06T00:00:00Z,2026-08-07T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+61.44,USD,2026-08-06T00:00:00Z,2026-08-07T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+205.60,USD,2026-08-07T00:00:00Z,2026-08-08T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.56,USD,2026-08-07T00:00:00Z,2026-08-08T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.42,USD,2026-08-07T00:00:00Z,2026-08-08T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+41.12,USD,2026-08-07T00:00:00Z,2026-08-08T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+123.36,USD,2026-08-07T00:00:00Z,2026-08-08T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.84,USD,2026-08-07T00:00:00Z,2026-08-08T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+61.68,USD,2026-08-07T00:00:00Z,2026-08-08T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+206.40,USD,2026-08-08T00:00:00Z,2026-08-09T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.64,USD,2026-08-08T00:00:00Z,2026-08-09T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.48,USD,2026-08-08T00:00:00Z,2026-08-09T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+41.28,USD,2026-08-08T00:00:00Z,2026-08-09T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+123.84,USD,2026-08-08T00:00:00Z,2026-08-09T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+30.96,USD,2026-08-08T00:00:00Z,2026-08-09T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+61.92,USD,2026-08-08T00:00:00Z,2026-08-09T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+207.20,USD,2026-08-09T00:00:00Z,2026-08-10T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.72,USD,2026-08-09T00:00:00Z,2026-08-10T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.54,USD,2026-08-09T00:00:00Z,2026-08-10T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+41.44,USD,2026-08-09T00:00:00Z,2026-08-10T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+124.32,USD,2026-08-09T00:00:00Z,2026-08-10T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.08,USD,2026-08-09T00:00:00Z,2026-08-10T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+62.16,USD,2026-08-09T00:00:00Z,2026-08-10T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+208.00,USD,2026-08-10T00:00:00Z,2026-08-11T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.80,USD,2026-08-10T00:00:00Z,2026-08-11T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.60,USD,2026-08-10T00:00:00Z,2026-08-11T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+41.60,USD,2026-08-10T00:00:00Z,2026-08-11T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+124.80,USD,2026-08-10T00:00:00Z,2026-08-11T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.20,USD,2026-08-10T00:00:00Z,2026-08-11T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+62.40,USD,2026-08-10T00:00:00Z,2026-08-11T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+208.80,USD,2026-08-11T00:00:00Z,2026-08-12T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.88,USD,2026-08-11T00:00:00Z,2026-08-12T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.66,USD,2026-08-11T00:00:00Z,2026-08-12T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+41.76,USD,2026-08-11T00:00:00Z,2026-08-12T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+125.28,USD,2026-08-11T00:00:00Z,2026-08-12T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.32,USD,2026-08-11T00:00:00Z,2026-08-12T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+62.64,USD,2026-08-11T00:00:00Z,2026-08-12T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+209.60,USD,2026-08-12T00:00:00Z,2026-08-13T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+20.96,USD,2026-08-12T00:00:00Z,2026-08-13T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.72,USD,2026-08-12T00:00:00Z,2026-08-13T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+41.92,USD,2026-08-12T00:00:00Z,2026-08-13T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+125.76,USD,2026-08-12T00:00:00Z,2026-08-13T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.44,USD,2026-08-12T00:00:00Z,2026-08-13T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+62.88,USD,2026-08-12T00:00:00Z,2026-08-13T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+210.40,USD,2026-08-13T00:00:00Z,2026-08-14T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.04,USD,2026-08-13T00:00:00Z,2026-08-14T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.78,USD,2026-08-13T00:00:00Z,2026-08-14T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+42.08,USD,2026-08-13T00:00:00Z,2026-08-14T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+126.24,USD,2026-08-13T00:00:00Z,2026-08-14T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.56,USD,2026-08-13T00:00:00Z,2026-08-14T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+63.12,USD,2026-08-13T00:00:00Z,2026-08-14T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+211.20,USD,2026-08-14T00:00:00Z,2026-08-15T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.12,USD,2026-08-14T00:00:00Z,2026-08-15T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.84,USD,2026-08-14T00:00:00Z,2026-08-15T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+42.24,USD,2026-08-14T00:00:00Z,2026-08-15T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+126.72,USD,2026-08-14T00:00:00Z,2026-08-15T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.68,USD,2026-08-14T00:00:00Z,2026-08-15T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+63.36,USD,2026-08-14T00:00:00Z,2026-08-15T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+212.00,USD,2026-08-15T00:00:00Z,2026-08-16T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.20,USD,2026-08-15T00:00:00Z,2026-08-16T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.90,USD,2026-08-15T00:00:00Z,2026-08-16T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+42.40,USD,2026-08-15T00:00:00Z,2026-08-16T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+127.20,USD,2026-08-15T00:00:00Z,2026-08-16T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.80,USD,2026-08-15T00:00:00Z,2026-08-16T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+63.60,USD,2026-08-15T00:00:00Z,2026-08-16T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+212.80,USD,2026-08-16T00:00:00Z,2026-08-17T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.28,USD,2026-08-16T00:00:00Z,2026-08-17T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+15.96,USD,2026-08-16T00:00:00Z,2026-08-17T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+42.56,USD,2026-08-16T00:00:00Z,2026-08-17T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+127.68,USD,2026-08-16T00:00:00Z,2026-08-17T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+31.92,USD,2026-08-16T00:00:00Z,2026-08-17T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+63.84,USD,2026-08-16T00:00:00Z,2026-08-17T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+213.60,USD,2026-08-17T00:00:00Z,2026-08-18T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.36,USD,2026-08-17T00:00:00Z,2026-08-18T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.02,USD,2026-08-17T00:00:00Z,2026-08-18T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+42.72,USD,2026-08-17T00:00:00Z,2026-08-18T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+128.16,USD,2026-08-17T00:00:00Z,2026-08-18T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.04,USD,2026-08-17T00:00:00Z,2026-08-18T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+64.08,USD,2026-08-17T00:00:00Z,2026-08-18T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+214.40,USD,2026-08-18T00:00:00Z,2026-08-19T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.44,USD,2026-08-18T00:00:00Z,2026-08-19T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.08,USD,2026-08-18T00:00:00Z,2026-08-19T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+42.88,USD,2026-08-18T00:00:00Z,2026-08-19T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+128.64,USD,2026-08-18T00:00:00Z,2026-08-19T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.16,USD,2026-08-18T00:00:00Z,2026-08-19T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+64.32,USD,2026-08-18T00:00:00Z,2026-08-19T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+215.20,USD,2026-08-19T00:00:00Z,2026-08-20T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.52,USD,2026-08-19T00:00:00Z,2026-08-20T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.14,USD,2026-08-19T00:00:00Z,2026-08-20T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+43.04,USD,2026-08-19T00:00:00Z,2026-08-20T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+129.12,USD,2026-08-19T00:00:00Z,2026-08-20T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.28,USD,2026-08-19T00:00:00Z,2026-08-20T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+64.56,USD,2026-08-19T00:00:00Z,2026-08-20T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+216.00,USD,2026-08-20T00:00:00Z,2026-08-21T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.60,USD,2026-08-20T00:00:00Z,2026-08-21T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.20,USD,2026-08-20T00:00:00Z,2026-08-21T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+43.20,USD,2026-08-20T00:00:00Z,2026-08-21T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+129.60,USD,2026-08-20T00:00:00Z,2026-08-21T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.40,USD,2026-08-20T00:00:00Z,2026-08-21T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+64.80,USD,2026-08-20T00:00:00Z,2026-08-21T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+216.80,USD,2026-08-21T00:00:00Z,2026-08-22T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.68,USD,2026-08-21T00:00:00Z,2026-08-22T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.26,USD,2026-08-21T00:00:00Z,2026-08-22T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+43.36,USD,2026-08-21T00:00:00Z,2026-08-22T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+130.08,USD,2026-08-21T00:00:00Z,2026-08-22T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.52,USD,2026-08-21T00:00:00Z,2026-08-22T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+65.04,USD,2026-08-21T00:00:00Z,2026-08-22T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+217.60,USD,2026-08-22T00:00:00Z,2026-08-23T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.76,USD,2026-08-22T00:00:00Z,2026-08-23T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.32,USD,2026-08-22T00:00:00Z,2026-08-23T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+43.52,USD,2026-08-22T00:00:00Z,2026-08-23T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+130.56,USD,2026-08-22T00:00:00Z,2026-08-23T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.64,USD,2026-08-22T00:00:00Z,2026-08-23T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+65.28,USD,2026-08-22T00:00:00Z,2026-08-23T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+218.40,USD,2026-08-23T00:00:00Z,2026-08-24T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.84,USD,2026-08-23T00:00:00Z,2026-08-24T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.38,USD,2026-08-23T00:00:00Z,2026-08-24T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+43.68,USD,2026-08-23T00:00:00Z,2026-08-24T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+131.04,USD,2026-08-23T00:00:00Z,2026-08-24T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.76,USD,2026-08-23T00:00:00Z,2026-08-24T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+65.52,USD,2026-08-23T00:00:00Z,2026-08-24T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+219.20,USD,2026-08-24T00:00:00Z,2026-08-25T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+21.92,USD,2026-08-24T00:00:00Z,2026-08-25T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.44,USD,2026-08-24T00:00:00Z,2026-08-25T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+43.84,USD,2026-08-24T00:00:00Z,2026-08-25T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+131.52,USD,2026-08-24T00:00:00Z,2026-08-25T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+32.88,USD,2026-08-24T00:00:00Z,2026-08-25T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+65.76,USD,2026-08-24T00:00:00Z,2026-08-25T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+220.00,USD,2026-08-25T00:00:00Z,2026-08-26T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.00,USD,2026-08-25T00:00:00Z,2026-08-26T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.50,USD,2026-08-25T00:00:00Z,2026-08-26T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+44.00,USD,2026-08-25T00:00:00Z,2026-08-26T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+132.00,USD,2026-08-25T00:00:00Z,2026-08-26T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.00,USD,2026-08-25T00:00:00Z,2026-08-26T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+66.00,USD,2026-08-25T00:00:00Z,2026-08-26T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+220.80,USD,2026-08-26T00:00:00Z,2026-08-27T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.08,USD,2026-08-26T00:00:00Z,2026-08-27T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.56,USD,2026-08-26T00:00:00Z,2026-08-27T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+44.16,USD,2026-08-26T00:00:00Z,2026-08-27T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+132.48,USD,2026-08-26T00:00:00Z,2026-08-27T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.12,USD,2026-08-26T00:00:00Z,2026-08-27T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+66.24,USD,2026-08-26T00:00:00Z,2026-08-27T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+221.60,USD,2026-08-27T00:00:00Z,2026-08-28T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.16,USD,2026-08-27T00:00:00Z,2026-08-28T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.62,USD,2026-08-27T00:00:00Z,2026-08-28T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+44.32,USD,2026-08-27T00:00:00Z,2026-08-28T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+132.96,USD,2026-08-27T00:00:00Z,2026-08-28T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.24,USD,2026-08-27T00:00:00Z,2026-08-28T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+66.48,USD,2026-08-27T00:00:00Z,2026-08-28T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+222.40,USD,2026-08-28T00:00:00Z,2026-08-29T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.24,USD,2026-08-28T00:00:00Z,2026-08-29T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.68,USD,2026-08-28T00:00:00Z,2026-08-29T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+44.48,USD,2026-08-28T00:00:00Z,2026-08-29T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+133.44,USD,2026-08-28T00:00:00Z,2026-08-29T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.36,USD,2026-08-28T00:00:00Z,2026-08-29T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+66.72,USD,2026-08-28T00:00:00Z,2026-08-29T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+223.20,USD,2026-08-29T00:00:00Z,2026-08-30T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.32,USD,2026-08-29T00:00:00Z,2026-08-30T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.74,USD,2026-08-29T00:00:00Z,2026-08-30T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+44.64,USD,2026-08-29T00:00:00Z,2026-08-30T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+133.92,USD,2026-08-29T00:00:00Z,2026-08-30T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.48,USD,2026-08-29T00:00:00Z,2026-08-30T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+66.96,USD,2026-08-29T00:00:00Z,2026-08-30T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+224.00,USD,2026-08-30T00:00:00Z,2026-08-31T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.40,USD,2026-08-30T00:00:00Z,2026-08-31T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.80,USD,2026-08-30T00:00:00Z,2026-08-31T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+44.80,USD,2026-08-30T00:00:00Z,2026-08-31T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+134.40,USD,2026-08-30T00:00:00Z,2026-08-31T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.60,USD,2026-08-30T00:00:00Z,2026-08-31T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+67.20,USD,2026-08-30T00:00:00Z,2026-08-31T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+224.80,USD,2026-08-31T00:00:00Z,2026-09-01T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.48,USD,2026-08-31T00:00:00Z,2026-09-01T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.86,USD,2026-08-31T00:00:00Z,2026-09-01T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+44.96,USD,2026-08-31T00:00:00Z,2026-09-01T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+134.88,USD,2026-08-31T00:00:00Z,2026-09-01T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.72,USD,2026-08-31T00:00:00Z,2026-09-01T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+67.44,USD,2026-08-31T00:00:00Z,2026-09-01T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+225.60,USD,2026-09-01T00:00:00Z,2026-09-02T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.56,USD,2026-09-01T00:00:00Z,2026-09-02T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.92,USD,2026-09-01T00:00:00Z,2026-09-02T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+45.12,USD,2026-09-01T00:00:00Z,2026-09-02T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+135.36,USD,2026-09-01T00:00:00Z,2026-09-02T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.84,USD,2026-09-01T00:00:00Z,2026-09-02T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+67.68,USD,2026-09-01T00:00:00Z,2026-09-02T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+226.40,USD,2026-09-02T00:00:00Z,2026-09-03T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.64,USD,2026-09-02T00:00:00Z,2026-09-03T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+16.98,USD,2026-09-02T00:00:00Z,2026-09-03T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+45.28,USD,2026-09-02T00:00:00Z,2026-09-03T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+135.84,USD,2026-09-02T00:00:00Z,2026-09-03T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+33.96,USD,2026-09-02T00:00:00Z,2026-09-03T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+67.92,USD,2026-09-02T00:00:00Z,2026-09-03T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+227.20,USD,2026-09-03T00:00:00Z,2026-09-04T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.72,USD,2026-09-03T00:00:00Z,2026-09-04T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.04,USD,2026-09-03T00:00:00Z,2026-09-04T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+45.44,USD,2026-09-03T00:00:00Z,2026-09-04T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+136.32,USD,2026-09-03T00:00:00Z,2026-09-04T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.08,USD,2026-09-03T00:00:00Z,2026-09-04T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+68.16,USD,2026-09-03T00:00:00Z,2026-09-04T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+228.00,USD,2026-09-04T00:00:00Z,2026-09-05T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.80,USD,2026-09-04T00:00:00Z,2026-09-05T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.10,USD,2026-09-04T00:00:00Z,2026-09-05T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+45.60,USD,2026-09-04T00:00:00Z,2026-09-05T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+136.80,USD,2026-09-04T00:00:00Z,2026-09-05T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.20,USD,2026-09-04T00:00:00Z,2026-09-05T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+68.40,USD,2026-09-04T00:00:00Z,2026-09-05T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+228.80,USD,2026-09-05T00:00:00Z,2026-09-06T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.88,USD,2026-09-05T00:00:00Z,2026-09-06T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.16,USD,2026-09-05T00:00:00Z,2026-09-06T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+45.76,USD,2026-09-05T00:00:00Z,2026-09-06T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+137.28,USD,2026-09-05T00:00:00Z,2026-09-06T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.32,USD,2026-09-05T00:00:00Z,2026-09-06T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+68.64,USD,2026-09-05T00:00:00Z,2026-09-06T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+229.60,USD,2026-09-06T00:00:00Z,2026-09-07T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+22.96,USD,2026-09-06T00:00:00Z,2026-09-07T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.22,USD,2026-09-06T00:00:00Z,2026-09-07T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+45.92,USD,2026-09-06T00:00:00Z,2026-09-07T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+137.76,USD,2026-09-06T00:00:00Z,2026-09-07T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.44,USD,2026-09-06T00:00:00Z,2026-09-07T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+68.88,USD,2026-09-06T00:00:00Z,2026-09-07T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+230.40,USD,2026-09-07T00:00:00Z,2026-09-08T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.04,USD,2026-09-07T00:00:00Z,2026-09-08T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.28,USD,2026-09-07T00:00:00Z,2026-09-08T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+46.08,USD,2026-09-07T00:00:00Z,2026-09-08T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+138.24,USD,2026-09-07T00:00:00Z,2026-09-08T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.56,USD,2026-09-07T00:00:00Z,2026-09-08T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+69.12,USD,2026-09-07T00:00:00Z,2026-09-08T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+231.20,USD,2026-09-08T00:00:00Z,2026-09-09T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.12,USD,2026-09-08T00:00:00Z,2026-09-09T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.34,USD,2026-09-08T00:00:00Z,2026-09-09T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+46.24,USD,2026-09-08T00:00:00Z,2026-09-09T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+138.72,USD,2026-09-08T00:00:00Z,2026-09-09T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.68,USD,2026-09-08T00:00:00Z,2026-09-09T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+69.36,USD,2026-09-08T00:00:00Z,2026-09-09T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+232.00,USD,2026-09-09T00:00:00Z,2026-09-10T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.20,USD,2026-09-09T00:00:00Z,2026-09-10T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.40,USD,2026-09-09T00:00:00Z,2026-09-10T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+46.40,USD,2026-09-09T00:00:00Z,2026-09-10T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+139.20,USD,2026-09-09T00:00:00Z,2026-09-10T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.80,USD,2026-09-09T00:00:00Z,2026-09-10T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+69.60,USD,2026-09-09T00:00:00Z,2026-09-10T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+232.80,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.28,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.46,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+46.56,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+139.68,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+34.92,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+69.84,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+-4.66,USD,2026-09-10T00:00:00Z,2026-09-11T00:00:00Z,Credit,AWS,Amazon Simple Storage Service,111122223333,prod-aws,Promotional credit,"{""team"":""data""}",
+233.60,USD,2026-09-11T00:00:00Z,2026-09-12T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.36,USD,2026-09-11T00:00:00Z,2026-09-12T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.52,USD,2026-09-11T00:00:00Z,2026-09-12T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+46.72,USD,2026-09-11T00:00:00Z,2026-09-12T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+140.16,USD,2026-09-11T00:00:00Z,2026-09-12T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.04,USD,2026-09-11T00:00:00Z,2026-09-12T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+70.08,USD,2026-09-11T00:00:00Z,2026-09-12T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+234.40,USD,2026-09-12T00:00:00Z,2026-09-13T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.44,USD,2026-09-12T00:00:00Z,2026-09-13T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.58,USD,2026-09-12T00:00:00Z,2026-09-13T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+46.88,USD,2026-09-12T00:00:00Z,2026-09-13T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+140.64,USD,2026-09-12T00:00:00Z,2026-09-13T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.16,USD,2026-09-12T00:00:00Z,2026-09-13T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+70.32,USD,2026-09-12T00:00:00Z,2026-09-13T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+235.20,USD,2026-09-13T00:00:00Z,2026-09-14T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.52,USD,2026-09-13T00:00:00Z,2026-09-14T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.64,USD,2026-09-13T00:00:00Z,2026-09-14T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+47.04,USD,2026-09-13T00:00:00Z,2026-09-14T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+141.12,USD,2026-09-13T00:00:00Z,2026-09-14T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.28,USD,2026-09-13T00:00:00Z,2026-09-14T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+70.56,USD,2026-09-13T00:00:00Z,2026-09-14T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+236.00,USD,2026-09-14T00:00:00Z,2026-09-15T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.60,USD,2026-09-14T00:00:00Z,2026-09-15T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.70,USD,2026-09-14T00:00:00Z,2026-09-15T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+47.20,USD,2026-09-14T00:00:00Z,2026-09-15T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+141.60,USD,2026-09-14T00:00:00Z,2026-09-15T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.40,USD,2026-09-14T00:00:00Z,2026-09-15T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+70.80,USD,2026-09-14T00:00:00Z,2026-09-15T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+236.80,USD,2026-09-15T00:00:00Z,2026-09-16T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.68,USD,2026-09-15T00:00:00Z,2026-09-16T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.76,USD,2026-09-15T00:00:00Z,2026-09-16T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+47.36,USD,2026-09-15T00:00:00Z,2026-09-16T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+142.08,USD,2026-09-15T00:00:00Z,2026-09-16T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.52,USD,2026-09-15T00:00:00Z,2026-09-16T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+71.04,USD,2026-09-15T00:00:00Z,2026-09-16T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+237.60,USD,2026-09-16T00:00:00Z,2026-09-17T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.76,USD,2026-09-16T00:00:00Z,2026-09-17T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.82,USD,2026-09-16T00:00:00Z,2026-09-17T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+47.52,USD,2026-09-16T00:00:00Z,2026-09-17T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+142.56,USD,2026-09-16T00:00:00Z,2026-09-17T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.64,USD,2026-09-16T00:00:00Z,2026-09-17T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+71.28,USD,2026-09-16T00:00:00Z,2026-09-17T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+238.40,USD,2026-09-17T00:00:00Z,2026-09-18T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.84,USD,2026-09-17T00:00:00Z,2026-09-18T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.88,USD,2026-09-17T00:00:00Z,2026-09-18T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+47.68,USD,2026-09-17T00:00:00Z,2026-09-18T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+143.04,USD,2026-09-17T00:00:00Z,2026-09-18T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.76,USD,2026-09-17T00:00:00Z,2026-09-18T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+71.52,USD,2026-09-17T00:00:00Z,2026-09-18T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+239.20,USD,2026-09-18T00:00:00Z,2026-09-19T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+23.92,USD,2026-09-18T00:00:00Z,2026-09-19T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+17.94,USD,2026-09-18T00:00:00Z,2026-09-19T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+47.84,USD,2026-09-18T00:00:00Z,2026-09-19T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+143.52,USD,2026-09-18T00:00:00Z,2026-09-19T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+35.88,USD,2026-09-18T00:00:00Z,2026-09-19T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+71.76,USD,2026-09-18T00:00:00Z,2026-09-19T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+240.00,USD,2026-09-19T00:00:00Z,2026-09-20T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.00,USD,2026-09-19T00:00:00Z,2026-09-20T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.00,USD,2026-09-19T00:00:00Z,2026-09-20T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+48.00,USD,2026-09-19T00:00:00Z,2026-09-20T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+144.00,USD,2026-09-19T00:00:00Z,2026-09-20T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.00,USD,2026-09-19T00:00:00Z,2026-09-20T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+72.00,USD,2026-09-19T00:00:00Z,2026-09-20T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+240.80,USD,2026-09-20T00:00:00Z,2026-09-21T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.08,USD,2026-09-20T00:00:00Z,2026-09-21T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.06,USD,2026-09-20T00:00:00Z,2026-09-21T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+48.16,USD,2026-09-20T00:00:00Z,2026-09-21T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+144.48,USD,2026-09-20T00:00:00Z,2026-09-21T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.12,USD,2026-09-20T00:00:00Z,2026-09-21T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+72.24,USD,2026-09-20T00:00:00Z,2026-09-21T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+241.60,USD,2026-09-21T00:00:00Z,2026-09-22T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.16,USD,2026-09-21T00:00:00Z,2026-09-22T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.12,USD,2026-09-21T00:00:00Z,2026-09-22T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+48.32,USD,2026-09-21T00:00:00Z,2026-09-22T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+144.96,USD,2026-09-21T00:00:00Z,2026-09-22T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.24,USD,2026-09-21T00:00:00Z,2026-09-22T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+72.48,USD,2026-09-21T00:00:00Z,2026-09-22T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+242.40,USD,2026-09-22T00:00:00Z,2026-09-23T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.24,USD,2026-09-22T00:00:00Z,2026-09-23T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.18,USD,2026-09-22T00:00:00Z,2026-09-23T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+48.48,USD,2026-09-22T00:00:00Z,2026-09-23T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+145.44,USD,2026-09-22T00:00:00Z,2026-09-23T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.36,USD,2026-09-22T00:00:00Z,2026-09-23T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+72.72,USD,2026-09-22T00:00:00Z,2026-09-23T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+243.20,USD,2026-09-23T00:00:00Z,2026-09-24T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.32,USD,2026-09-23T00:00:00Z,2026-09-24T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.24,USD,2026-09-23T00:00:00Z,2026-09-24T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+48.64,USD,2026-09-23T00:00:00Z,2026-09-24T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+145.92,USD,2026-09-23T00:00:00Z,2026-09-24T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.48,USD,2026-09-23T00:00:00Z,2026-09-24T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+72.96,USD,2026-09-23T00:00:00Z,2026-09-24T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+244.00,USD,2026-09-24T00:00:00Z,2026-09-25T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.40,USD,2026-09-24T00:00:00Z,2026-09-25T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.30,USD,2026-09-24T00:00:00Z,2026-09-25T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+48.80,USD,2026-09-24T00:00:00Z,2026-09-25T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+146.40,USD,2026-09-24T00:00:00Z,2026-09-25T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.60,USD,2026-09-24T00:00:00Z,2026-09-25T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+73.20,USD,2026-09-24T00:00:00Z,2026-09-25T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+244.80,USD,2026-09-25T00:00:00Z,2026-09-26T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.48,USD,2026-09-25T00:00:00Z,2026-09-26T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.36,USD,2026-09-25T00:00:00Z,2026-09-26T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+48.96,USD,2026-09-25T00:00:00Z,2026-09-26T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+146.88,USD,2026-09-25T00:00:00Z,2026-09-26T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.72,USD,2026-09-25T00:00:00Z,2026-09-26T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+73.44,USD,2026-09-25T00:00:00Z,2026-09-26T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+245.60,USD,2026-09-26T00:00:00Z,2026-09-27T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.56,USD,2026-09-26T00:00:00Z,2026-09-27T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.42,USD,2026-09-26T00:00:00Z,2026-09-27T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+49.12,USD,2026-09-26T00:00:00Z,2026-09-27T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+147.36,USD,2026-09-26T00:00:00Z,2026-09-27T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.84,USD,2026-09-26T00:00:00Z,2026-09-27T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+73.68,USD,2026-09-26T00:00:00Z,2026-09-27T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+246.40,USD,2026-09-27T00:00:00Z,2026-09-28T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.64,USD,2026-09-27T00:00:00Z,2026-09-28T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.48,USD,2026-09-27T00:00:00Z,2026-09-28T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+49.28,USD,2026-09-27T00:00:00Z,2026-09-28T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+147.84,USD,2026-09-27T00:00:00Z,2026-09-28T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+36.96,USD,2026-09-27T00:00:00Z,2026-09-28T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+73.92,USD,2026-09-27T00:00:00Z,2026-09-28T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+247.20,USD,2026-09-28T00:00:00Z,2026-09-29T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.72,USD,2026-09-28T00:00:00Z,2026-09-29T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.54,USD,2026-09-28T00:00:00Z,2026-09-29T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+49.44,USD,2026-09-28T00:00:00Z,2026-09-29T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+148.32,USD,2026-09-28T00:00:00Z,2026-09-29T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.08,USD,2026-09-28T00:00:00Z,2026-09-29T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+74.16,USD,2026-09-28T00:00:00Z,2026-09-29T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+248.00,USD,2026-09-29T00:00:00Z,2026-09-30T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.80,USD,2026-09-29T00:00:00Z,2026-09-30T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.60,USD,2026-09-29T00:00:00Z,2026-09-30T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+49.60,USD,2026-09-29T00:00:00Z,2026-09-30T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+148.80,USD,2026-09-29T00:00:00Z,2026-09-30T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.20,USD,2026-09-29T00:00:00Z,2026-09-30T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+74.40,USD,2026-09-29T00:00:00Z,2026-09-30T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+248.80,USD,2026-09-30T00:00:00Z,2026-10-01T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.88,USD,2026-09-30T00:00:00Z,2026-10-01T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.66,USD,2026-09-30T00:00:00Z,2026-10-01T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+49.76,USD,2026-09-30T00:00:00Z,2026-10-01T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+149.28,USD,2026-09-30T00:00:00Z,2026-10-01T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.32,USD,2026-09-30T00:00:00Z,2026-10-01T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+74.64,USD,2026-09-30T00:00:00Z,2026-10-01T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+249.60,USD,2026-10-01T00:00:00Z,2026-10-02T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+24.96,USD,2026-10-01T00:00:00Z,2026-10-02T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.72,USD,2026-10-01T00:00:00Z,2026-10-02T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+49.92,USD,2026-10-01T00:00:00Z,2026-10-02T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+149.76,USD,2026-10-01T00:00:00Z,2026-10-02T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.44,USD,2026-10-01T00:00:00Z,2026-10-02T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+74.88,USD,2026-10-01T00:00:00Z,2026-10-02T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+250.40,USD,2026-10-02T00:00:00Z,2026-10-03T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.04,USD,2026-10-02T00:00:00Z,2026-10-03T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.78,USD,2026-10-02T00:00:00Z,2026-10-03T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+50.08,USD,2026-10-02T00:00:00Z,2026-10-03T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+150.24,USD,2026-10-02T00:00:00Z,2026-10-03T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.56,USD,2026-10-02T00:00:00Z,2026-10-03T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+75.12,USD,2026-10-02T00:00:00Z,2026-10-03T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+251.20,USD,2026-10-03T00:00:00Z,2026-10-04T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.12,USD,2026-10-03T00:00:00Z,2026-10-04T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.84,USD,2026-10-03T00:00:00Z,2026-10-04T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+50.24,USD,2026-10-03T00:00:00Z,2026-10-04T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+150.72,USD,2026-10-03T00:00:00Z,2026-10-04T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.68,USD,2026-10-03T00:00:00Z,2026-10-04T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+75.36,USD,2026-10-03T00:00:00Z,2026-10-04T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+252.00,USD,2026-10-04T00:00:00Z,2026-10-05T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.20,USD,2026-10-04T00:00:00Z,2026-10-05T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.90,USD,2026-10-04T00:00:00Z,2026-10-05T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+50.40,USD,2026-10-04T00:00:00Z,2026-10-05T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+151.20,USD,2026-10-04T00:00:00Z,2026-10-05T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.80,USD,2026-10-04T00:00:00Z,2026-10-05T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+75.60,USD,2026-10-04T00:00:00Z,2026-10-05T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+252.80,USD,2026-10-05T00:00:00Z,2026-10-06T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.28,USD,2026-10-05T00:00:00Z,2026-10-06T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+18.96,USD,2026-10-05T00:00:00Z,2026-10-06T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+50.56,USD,2026-10-05T00:00:00Z,2026-10-06T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+151.68,USD,2026-10-05T00:00:00Z,2026-10-06T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+37.92,USD,2026-10-05T00:00:00Z,2026-10-06T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+75.84,USD,2026-10-05T00:00:00Z,2026-10-06T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+253.60,USD,2026-10-06T00:00:00Z,2026-10-07T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.36,USD,2026-10-06T00:00:00Z,2026-10-07T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.02,USD,2026-10-06T00:00:00Z,2026-10-07T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+50.72,USD,2026-10-06T00:00:00Z,2026-10-07T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+152.16,USD,2026-10-06T00:00:00Z,2026-10-07T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.04,USD,2026-10-06T00:00:00Z,2026-10-07T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+76.08,USD,2026-10-06T00:00:00Z,2026-10-07T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+254.40,USD,2026-10-07T00:00:00Z,2026-10-08T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.44,USD,2026-10-07T00:00:00Z,2026-10-08T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.08,USD,2026-10-07T00:00:00Z,2026-10-08T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+50.88,USD,2026-10-07T00:00:00Z,2026-10-08T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+152.64,USD,2026-10-07T00:00:00Z,2026-10-08T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.16,USD,2026-10-07T00:00:00Z,2026-10-08T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+76.32,USD,2026-10-07T00:00:00Z,2026-10-08T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+255.20,USD,2026-10-08T00:00:00Z,2026-10-09T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.52,USD,2026-10-08T00:00:00Z,2026-10-09T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.14,USD,2026-10-08T00:00:00Z,2026-10-09T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+51.04,USD,2026-10-08T00:00:00Z,2026-10-09T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+153.12,USD,2026-10-08T00:00:00Z,2026-10-09T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.28,USD,2026-10-08T00:00:00Z,2026-10-09T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+76.56,USD,2026-10-08T00:00:00Z,2026-10-09T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+256.00,USD,2026-10-09T00:00:00Z,2026-10-10T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.60,USD,2026-10-09T00:00:00Z,2026-10-10T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.20,USD,2026-10-09T00:00:00Z,2026-10-10T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+51.20,USD,2026-10-09T00:00:00Z,2026-10-10T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+153.60,USD,2026-10-09T00:00:00Z,2026-10-10T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.40,USD,2026-10-09T00:00:00Z,2026-10-10T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+76.80,USD,2026-10-09T00:00:00Z,2026-10-10T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+256.80,USD,2026-10-10T00:00:00Z,2026-10-11T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.68,USD,2026-10-10T00:00:00Z,2026-10-11T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.26,USD,2026-10-10T00:00:00Z,2026-10-11T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+51.36,USD,2026-10-10T00:00:00Z,2026-10-11T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+154.08,USD,2026-10-10T00:00:00Z,2026-10-11T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.52,USD,2026-10-10T00:00:00Z,2026-10-11T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+77.04,USD,2026-10-10T00:00:00Z,2026-10-11T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+257.60,USD,2026-10-11T00:00:00Z,2026-10-12T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.76,USD,2026-10-11T00:00:00Z,2026-10-12T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.32,USD,2026-10-11T00:00:00Z,2026-10-12T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+51.52,USD,2026-10-11T00:00:00Z,2026-10-12T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+154.56,USD,2026-10-11T00:00:00Z,2026-10-12T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.64,USD,2026-10-11T00:00:00Z,2026-10-12T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+77.28,USD,2026-10-11T00:00:00Z,2026-10-12T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+258.40,USD,2026-10-12T00:00:00Z,2026-10-13T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.84,USD,2026-10-12T00:00:00Z,2026-10-13T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.38,USD,2026-10-12T00:00:00Z,2026-10-13T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+51.68,USD,2026-10-12T00:00:00Z,2026-10-13T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+155.04,USD,2026-10-12T00:00:00Z,2026-10-13T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.76,USD,2026-10-12T00:00:00Z,2026-10-13T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+77.52,USD,2026-10-12T00:00:00Z,2026-10-13T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+777.60,USD,2026-10-13T00:00:00Z,2026-10-14T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+25.92,USD,2026-10-13T00:00:00Z,2026-10-14T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.44,USD,2026-10-13T00:00:00Z,2026-10-14T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+51.84,USD,2026-10-13T00:00:00Z,2026-10-14T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+155.52,USD,2026-10-13T00:00:00Z,2026-10-14T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+38.88,USD,2026-10-13T00:00:00Z,2026-10-14T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+77.76,USD,2026-10-13T00:00:00Z,2026-10-14T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+260.00,USD,2026-10-14T00:00:00Z,2026-10-15T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.00,USD,2026-10-14T00:00:00Z,2026-10-15T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.50,USD,2026-10-14T00:00:00Z,2026-10-15T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+52.00,USD,2026-10-14T00:00:00Z,2026-10-15T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+156.00,USD,2026-10-14T00:00:00Z,2026-10-15T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.00,USD,2026-10-14T00:00:00Z,2026-10-15T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+78.00,USD,2026-10-14T00:00:00Z,2026-10-15T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+260.80,USD,2026-10-15T00:00:00Z,2026-10-16T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.08,USD,2026-10-15T00:00:00Z,2026-10-16T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.56,USD,2026-10-15T00:00:00Z,2026-10-16T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+52.16,USD,2026-10-15T00:00:00Z,2026-10-16T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+156.48,USD,2026-10-15T00:00:00Z,2026-10-16T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.12,USD,2026-10-15T00:00:00Z,2026-10-16T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+78.24,USD,2026-10-15T00:00:00Z,2026-10-16T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+261.60,USD,2026-10-16T00:00:00Z,2026-10-17T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.16,USD,2026-10-16T00:00:00Z,2026-10-17T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.62,USD,2026-10-16T00:00:00Z,2026-10-17T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+52.32,USD,2026-10-16T00:00:00Z,2026-10-17T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+156.96,USD,2026-10-16T00:00:00Z,2026-10-17T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.24,USD,2026-10-16T00:00:00Z,2026-10-17T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+78.48,USD,2026-10-16T00:00:00Z,2026-10-17T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+262.40,USD,2026-10-17T00:00:00Z,2026-10-18T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.24,USD,2026-10-17T00:00:00Z,2026-10-18T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.68,USD,2026-10-17T00:00:00Z,2026-10-18T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+52.48,USD,2026-10-17T00:00:00Z,2026-10-18T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+157.44,USD,2026-10-17T00:00:00Z,2026-10-18T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.36,USD,2026-10-17T00:00:00Z,2026-10-18T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+78.72,USD,2026-10-17T00:00:00Z,2026-10-18T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+263.20,USD,2026-10-18T00:00:00Z,2026-10-19T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.32,USD,2026-10-18T00:00:00Z,2026-10-19T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.74,USD,2026-10-18T00:00:00Z,2026-10-19T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+52.64,USD,2026-10-18T00:00:00Z,2026-10-19T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+157.92,USD,2026-10-18T00:00:00Z,2026-10-19T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.48,USD,2026-10-18T00:00:00Z,2026-10-19T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+78.96,USD,2026-10-18T00:00:00Z,2026-10-19T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+264.00,USD,2026-10-19T00:00:00Z,2026-10-20T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.40,USD,2026-10-19T00:00:00Z,2026-10-20T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.80,USD,2026-10-19T00:00:00Z,2026-10-20T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+52.80,USD,2026-10-19T00:00:00Z,2026-10-20T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+158.40,USD,2026-10-19T00:00:00Z,2026-10-20T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.60,USD,2026-10-19T00:00:00Z,2026-10-20T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+79.20,USD,2026-10-19T00:00:00Z,2026-10-20T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+264.80,USD,2026-10-20T00:00:00Z,2026-10-21T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.48,USD,2026-10-20T00:00:00Z,2026-10-21T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.86,USD,2026-10-20T00:00:00Z,2026-10-21T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+52.96,USD,2026-10-20T00:00:00Z,2026-10-21T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+158.88,USD,2026-10-20T00:00:00Z,2026-10-21T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.72,USD,2026-10-20T00:00:00Z,2026-10-21T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+79.44,USD,2026-10-20T00:00:00Z,2026-10-21T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+265.60,USD,2026-10-21T00:00:00Z,2026-10-22T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.56,USD,2026-10-21T00:00:00Z,2026-10-22T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.92,USD,2026-10-21T00:00:00Z,2026-10-22T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+53.12,USD,2026-10-21T00:00:00Z,2026-10-22T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+159.36,USD,2026-10-21T00:00:00Z,2026-10-22T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.84,USD,2026-10-21T00:00:00Z,2026-10-22T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+79.68,USD,2026-10-21T00:00:00Z,2026-10-22T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+266.40,USD,2026-10-22T00:00:00Z,2026-10-23T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.64,USD,2026-10-22T00:00:00Z,2026-10-23T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+19.98,USD,2026-10-22T00:00:00Z,2026-10-23T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+53.28,USD,2026-10-22T00:00:00Z,2026-10-23T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+159.84,USD,2026-10-22T00:00:00Z,2026-10-23T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+39.96,USD,2026-10-22T00:00:00Z,2026-10-23T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+79.92,USD,2026-10-22T00:00:00Z,2026-10-23T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+267.20,USD,2026-10-23T00:00:00Z,2026-10-24T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.72,USD,2026-10-23T00:00:00Z,2026-10-24T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+20.04,USD,2026-10-23T00:00:00Z,2026-10-24T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+53.44,USD,2026-10-23T00:00:00Z,2026-10-24T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+160.32,USD,2026-10-23T00:00:00Z,2026-10-24T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+40.08,USD,2026-10-23T00:00:00Z,2026-10-24T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+80.16,USD,2026-10-23T00:00:00Z,2026-10-24T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+268.00,USD,2026-10-24T00:00:00Z,2026-10-25T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.80,USD,2026-10-24T00:00:00Z,2026-10-25T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+20.10,USD,2026-10-24T00:00:00Z,2026-10-25T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+53.60,USD,2026-10-24T00:00:00Z,2026-10-25T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+160.80,USD,2026-10-24T00:00:00Z,2026-10-25T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+40.20,USD,2026-10-24T00:00:00Z,2026-10-25T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+80.40,USD,2026-10-24T00:00:00Z,2026-10-25T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+268.80,USD,2026-10-25T00:00:00Z,2026-10-26T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.88,USD,2026-10-25T00:00:00Z,2026-10-26T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+20.16,USD,2026-10-25T00:00:00Z,2026-10-26T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+53.76,USD,2026-10-25T00:00:00Z,2026-10-26T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+161.28,USD,2026-10-25T00:00:00Z,2026-10-26T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+40.32,USD,2026-10-25T00:00:00Z,2026-10-26T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+80.64,USD,2026-10-25T00:00:00Z,2026-10-26T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+269.60,USD,2026-10-26T00:00:00Z,2026-10-27T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+26.96,USD,2026-10-26T00:00:00Z,2026-10-27T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+20.22,USD,2026-10-26T00:00:00Z,2026-10-27T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+53.92,USD,2026-10-26T00:00:00Z,2026-10-27T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+161.76,USD,2026-10-26T00:00:00Z,2026-10-27T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+40.44,USD,2026-10-26T00:00:00Z,2026-10-27T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+80.88,USD,2026-10-26T00:00:00Z,2026-10-27T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+270.40,USD,2026-10-27T00:00:00Z,2026-10-28T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+27.04,USD,2026-10-27T00:00:00Z,2026-10-28T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+20.28,USD,2026-10-27T00:00:00Z,2026-10-28T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+54.08,USD,2026-10-27T00:00:00Z,2026-10-28T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+162.24,USD,2026-10-27T00:00:00Z,2026-10-28T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+40.56,USD,2026-10-27T00:00:00Z,2026-10-28T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+81.12,USD,2026-10-27T00:00:00Z,2026-10-28T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,
+271.20,USD,2026-10-28T00:00:00Z,2026-10-29T00:00:00Z,Usage,AWS,Amazon Elastic Compute Cloud,111122223333,prod-aws,USD 0.0816 per On Demand Linux m7g.large Instance Hour,"{""team"":""web""}",USE1-BoxUsage:m7g.large
+27.12,USD,2026-10-28T00:00:00Z,2026-10-29T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.045 per GB Data Processed by NAT Gateways,,USE1-NatGateway-Bytes
+20.34,USD,2026-10-28T00:00:00Z,2026-10-29T00:00:00Z,Usage,AWS,EC2 - Other,111122223333,prod-aws,USD 0.10 per GB-month of General Purpose SSD (gp2) provisioned storage,,USE1-EBS:VolumeUsage.gp2
+54.24,USD,2026-10-28T00:00:00Z,2026-10-29T00:00:00Z,Usage,AWS,Amazon Simple Storage Service,111122223333,prod-aws,USD 0.023 per GB - first 50 TB / month of storage used,"{""team"":""data""}",USE1-TimedStorage-ByteHrs
+162.72,USD,2026-10-28T00:00:00Z,2026-10-29T00:00:00Z,Usage,Microsoft,Virtual Machines,00000000-1111-2222-3333-444444444444,prod-azure,D4s v5 usage,,
+40.68,USD,2026-10-28T00:00:00Z,2026-10-29T00:00:00Z,Usage,Microsoft,Storage,00000000-1111-2222-3333-444444444444,prod-azure,Hot LRS data stored,,
+81.36,USD,2026-10-28T00:00:00Z,2026-10-29T00:00:00Z,Usage,Microsoft,Azure SQL Database,00000000-1111-2222-3333-444444444444,prod-azure,Gen Purpose compute,,

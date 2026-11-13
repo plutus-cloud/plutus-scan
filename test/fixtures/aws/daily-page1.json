@@ -1,0 +1,76 @@
+{
+  "NextPageToken": "page2-token",
+  "GroupDefinitions": [],
+  "ResultsByTime": [
+    {
+      "TimePeriod": {
+        "Start": "2026-09-10",
+        "End": "2026-09-10"
+      },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "20",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Simple Storage Service",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "50",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Relational Database Service",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "60",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "AWS Lambda",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "4",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "AWS Key Management Service",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "0",
+              "Unit": "USD"
+            }
+          }
+        }
+      ],
+      "Estimated": false
+    }
+  ]
+}

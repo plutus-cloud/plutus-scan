@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "starting_at": "2026-10-01T00:00:00Z",
+      "ending_at": "2026-10-02T00:00:00Z",
+      "results": [
+        {
+          "amount": "123.45",
+          "currency": "usd",
+          "description": "Model Beta Usage - Input Tokens",
+          "model": "model-beta",
+          "cost_type": "tokens",
+          "workspace_id": "wrkspc_01",
+          "token_type": "uncached_input_tokens"
+        },
+        {
+          "amount": "250",
+          "currency": "usd",
+          "description": "Model Gamma Usage",
+          "model": "model-gamma",
+          "cost_type": "tokens",
+          "workspace_id": null
+        },
+        {
+          "amount": "0",
+          "currency": "usd",
+          "description": "Free",
+          "model": null,
+          "cost_type": "tokens",
+          "workspace_id": null
+        },
+        {
+          "amount": "50",
+          "currency": "usd",
+          "description": "Web search",
+          "model": null,
+          "cost_type": "web_search",
+          "workspace_id": "wrkspc_01"
+        },
+        {
+          "amount": "10",
+          "currency": "usd",
+          "description": null,
+          "model": null,
+          "cost_type": "code_execution",
+          "workspace_id": null
+        }
+      ]
+    }
+  ],
+  "has_more": true,
+  "next_page": "p2"
+}

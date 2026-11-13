@@ -1,0 +1,43 @@
+{
+  "name": "plutus-scan",
+  "version": "0.1.0",
+  "description": "Zero-setup CLI that reports what changed in a cloud or AI bill",
+  "keywords": [
+    "finops",
+    "cloud-cost",
+    "aws",
+    "cost-explorer",
+    "openai",
+    "anthropic",
+    "focus",
+    "billing",
+    "cli"
+  ],
+  "homepage": "https://github.com/plutus-cloud/plutus-scan#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plutus-cloud/plutus-scan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/plutus-cloud/plutus-scan/issues"
+  },
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "plutus-scan": "bin/plutus-scan.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "hyparquet": "1.33.0"
+  }
+}

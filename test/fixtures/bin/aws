@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+// Fake `aws` for spawned CLI tests: prints the fixture from test/fixtures/aws that
+// fixtureFor(argv) picks. It never calls the real aws. Only dynamic import is used so
+// the script runs whether Node loads this extensionless file as ESM or CommonJS.
+Promise.all([import('node:path'), import('node:url'), import('node:fs')]).then(async ([path, url, fs]) => {
+  const here = path.dirname(fs.realpathSync(process.argv[1]));
+  const { fixtureFor } = await import(url.pathToFileURL(path.join(here, '../../helpers/aws-fake.js')).href);
+  const args = process.argv.slice(2);
+  process.stdout.write(fs.readFileSync(path.join(here, '../aws', fixtureFor(args))));
+});

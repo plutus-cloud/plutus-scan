@@ -1,0 +1,741 @@
+{
+ "source": "Every usage type in a rule's \"match\" list, and every \"miss\" that names the same offer, is a usageType value copied from the AWS Price List bulk API: https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/<offer>/current/us-east-1/index.csv, the offer named in each entry, fetched 2026-11-12. A \"miss\" is a nearby real usage type (or the same one under another service) that the rule must not match.",
+ "serviceNames": "Service names are the ServiceName values of the official FOCUS 1.0 sample (test/fixtures/focus/official-sample.csv) where it has the service, otherwise the Price List serviceName. Cost Explorer SERVICE values differ in places (for example \"Amazon Elastic Compute Cloud - Compute\"), which is why the service gates in candidates.js match a fragment without case.",
+ "notCovered": "ElasticIP:IdleAddress (the idle-ip rule) is kept from the first release but is not in the current Price List; PublicIPv4:IdleAddress is.",
+ "rules": {
+  "idle-ip": {
+   "offer": "AmazonVPC",
+   "service": "Amazon Virtual Private Cloud",
+   "match": [
+    "USE1-PublicIPv4:IdleAddress"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-PublicIPv4:InUseAddress",
+     "service": "Amazon Virtual Private Cloud"
+    }
+   ]
+  },
+  "extended-support": {
+   "offer": "AmazonEKS",
+   "service": "Amazon Elastic Container Service for Kubernetes",
+   "match": [
+    "USE1-AmazonEKS-Hours:extendedSupport"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-AmazonEKS-Hours:perCluster",
+     "service": "Amazon Elastic Container Service for Kubernetes"
+    }
+   ]
+  },
+  "nat": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "NatGateway-Hours",
+    "NatGateway-Bytes",
+    "USE1-RegionalNatGateway-Hours",
+    "USE1-RegionalNatGateway-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "NatGateway-Prvd-Bytes",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "cross-az": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "DataTransfer-Regional-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-APN1-AWS-Out-Bytes",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "egress": {
+   "offer": "AWSDataTransfer",
+   "service": "AWS Data Transfer",
+   "match": [
+    "DataTransfer-Out-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "DataTransfer-Regional-Bytes",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "gp2": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "EBS:VolumeUsage.gp2"
+   ],
+   "miss": [
+    {
+     "usageType": "EBS:VolumeUsage.gp3",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "snapshots": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "EBS:SnapshotUsage"
+   ],
+   "miss": [
+    {
+     "usageType": "EBS:SnapshotArchiveStorage",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "cw-logs": {
+   "offer": "AmazonCloudWatch",
+   "service": "AmazonCloudWatch",
+   "match": [
+    "USE1-DataProcessing-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-DataProcessingIA-Bytes",
+     "service": "AmazonCloudWatch"
+    }
+   ]
+  },
+  "old-gen": {
+   "offer": "AmazonEC2",
+   "service": "Amazon Elastic Compute Cloud - Compute",
+   "match": [
+    "BoxUsage:m4.large",
+    "BoxUsage:c4.large",
+    "BoxUsage:t2.large"
+   ],
+   "miss": [
+    {
+     "usageType": "BoxUsage:m7g.large",
+     "service": "Amazon Elastic Compute Cloud - Compute"
+    }
+   ]
+  },
+  "ec2-dedicated": {
+   "offer": "AmazonEC2",
+   "service": "Amazon Elastic Compute Cloud - Compute",
+   "match": [
+    "DedicatedUsage:m5.large",
+    "DedicatedUsage"
+   ],
+   "miss": [
+    {
+     "usageType": "BoxUsage:m5.large",
+     "service": "Amazon Elastic Compute Cloud - Compute"
+    },
+    {
+     "usageType": "DedicatedRes:m5.large",
+     "service": "Amazon Elastic Compute Cloud - Compute"
+    }
+   ]
+  },
+  "ec2-cpu-credits": {
+   "offer": "AmazonEC2",
+   "service": "Amazon Elastic Compute Cloud - Compute",
+   "match": [
+    "CPUCredits:t3",
+    "CPUCredits:t4g",
+    "CPUCredits:t2"
+   ],
+   "miss": [
+    {
+     "usageType": "BoxUsage:t3.micro",
+     "service": "Amazon Elastic Compute Cloud - Compute"
+    }
+   ]
+  },
+  "ebs-piops": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "EBS:VolumeUsage.piops",
+    "EBS:VolumeUsage.io2",
+    "EBS:VolumeP-IOPS.piops",
+    "EBS:VolumeP-IOPS.io2",
+    "EBS:VolumeP-IOPS.io2.tier2"
+   ],
+   "miss": [
+    {
+     "usageType": "EBS:VolumeP-IOPS.gp3",
+     "service": "EC2 - Other"
+    },
+    {
+     "usageType": "EBS:VolumeUsage.gp3",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "ebs-hdd": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "EBS:VolumeUsage",
+    "EBS:VolumeIOUsage",
+    "EBS:VolumeUsage.st1",
+    "EBS:VolumeUsage.sc1"
+   ],
+   "miss": [
+    {
+     "usageType": "EBS:VolumeUsage.gp3",
+     "service": "EC2 - Other"
+    },
+    {
+     "usageType": "EBS:SnapshotUsage",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "ebs-fsr": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "USE1-EBS:FastSnapshotRestore"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-EBS:directAPI.snapshot.Get",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "public-ipv4": {
+   "offer": "AmazonVPC",
+   "service": "Amazon Virtual Private Cloud",
+   "match": [
+    "USE1-PublicIPv4:InUseAddress"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-PublicIPv4:ContiguousBlock",
+     "service": "Amazon Virtual Private Cloud"
+    }
+   ]
+  },
+  "inter-region": {
+   "offer": "AmazonEC2",
+   "service": "EC2 - Other",
+   "match": [
+    "USE1-APN1-AWS-Out-Bytes",
+    "APN1-USE1-AWS-Out-Bytes",
+    "USW2-USE1-AWS-Out-Bytes",
+    "EU-USE1-AWS-Out-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-APN1-AWS-In-Bytes",
+     "service": "EC2 - Other"
+    },
+    {
+     "usageType": "DataTransfer-Regional-Bytes",
+     "service": "EC2 - Other"
+    }
+   ]
+  },
+  "elb-classic": {
+   "offer": "AWSELB",
+   "service": "Elastic Load Balancing",
+   "match": [
+    "DataProcessing-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "LCUUsage",
+     "service": "Elastic Load Balancing"
+    },
+    {
+     "usageType": "DataProcessing-Bytes",
+     "service": "AmazonCloudWatch"
+    }
+   ]
+  },
+  "rds-old-gen": {
+   "offer": "AmazonRDS",
+   "service": "Amazon Relational Database Service",
+   "match": [
+    "InstanceUsage:db.m3.large",
+    "InstanceUsage:db.r4.large",
+    "InstanceUsage:db.t2.micro",
+    "Multi-AZUsage:db.m4.large"
+   ],
+   "miss": [
+    {
+     "usageType": "InstanceUsage:db.m5.large",
+     "service": "Amazon Relational Database Service"
+    },
+    {
+     "usageType": "InstanceUsage:db.r6g.large",
+     "service": "Amazon Relational Database Service"
+    }
+   ]
+  },
+  "rds-multi-az": {
+   "offer": "AmazonRDS",
+   "service": "Amazon Relational Database Service",
+   "match": [
+    "Multi-AZUsage:db.m5.large",
+    "Multi-AZUsage:db.r6g.large"
+   ],
+   "miss": [
+    {
+     "usageType": "InstanceUsage:db.r6g.large",
+     "service": "Amazon Relational Database Service"
+    },
+    {
+     "usageType": "Multi-AZUsage:db.r3.large",
+     "service": "Amazon Relational Database Service"
+    }
+   ]
+  },
+  "rds-piops": {
+   "offer": "AmazonRDS",
+   "service": "Amazon Relational Database Service",
+   "match": [
+    "RDS:PIOPS",
+    "RDS:PIOPS-Storage",
+    "RDS:IO2-PIOPS",
+    "RDS:Multi-AZ-PIOPS",
+    "RDS:Multi-AZ-PIOPS-Storage-IO2"
+   ],
+   "miss": [
+    {
+     "usageType": "RDS:GP3-PIOPS",
+     "service": "Amazon Relational Database Service"
+    },
+    {
+     "usageType": "RDS:StorageUsage",
+     "service": "Amazon Relational Database Service"
+    }
+   ]
+  },
+  "rds-backup": {
+   "offer": "AmazonRDS",
+   "service": "Amazon Relational Database Service",
+   "match": [
+    "RDS:ChargedBackupUsage",
+    "Aurora:BackupUsage"
+   ],
+   "miss": [
+    {
+     "usageType": "Aurora:StorageUsage",
+     "service": "Amazon Relational Database Service"
+    }
+   ]
+  },
+  "rds-gp2": {
+   "offer": "AmazonRDS",
+   "service": "Amazon Relational Database Service",
+   "match": [
+    "RDS:GP2-Storage",
+    "RDS:Multi-AZ-GP2-Storage"
+   ],
+   "miss": [
+    {
+     "usageType": "RDS:GP3-Storage",
+     "service": "Amazon Relational Database Service"
+    }
+   ]
+  },
+  "aurora-io": {
+   "offer": "AmazonRDS",
+   "service": "Amazon Relational Database Service",
+   "match": [
+    "Aurora:StorageIOUsage"
+   ],
+   "miss": [
+    {
+     "usageType": "Aurora:IO-OptimizedStorageUsage",
+     "service": "Amazon Relational Database Service"
+    }
+   ]
+  },
+  "s3-standard": {
+   "offer": "AmazonS3",
+   "service": "Amazon Simple Storage Service",
+   "match": [
+    "TimedStorage-ByteHrs"
+   ],
+   "miss": [
+    {
+     "usageType": "TimedStorage-SIA-ByteHrs",
+     "service": "Amazon Simple Storage Service"
+    },
+    {
+     "usageType": "TimedStorage-ByteHrs",
+     "service": "AmazonCloudWatch"
+    }
+   ]
+  },
+  "s3-requests": {
+   "offer": "AmazonS3",
+   "service": "Amazon Simple Storage Service",
+   "match": [
+    "Requests-Tier1",
+    "Requests-Tier2"
+   ],
+   "miss": [
+    {
+     "usageType": "Requests-INT-Tier1",
+     "service": "Amazon Simple Storage Service"
+    },
+    {
+     "usageType": "Requests-Tier1",
+     "service": "Amazon DynamoDB"
+    }
+   ]
+  },
+  "s3-early-delete": {
+   "offer": "AmazonS3",
+   "service": "Amazon Simple Storage Service",
+   "match": [
+    "EarlyDelete-ByteHrs",
+    "EarlyDelete-SIA",
+    "EarlyDelete-ZIA",
+    "EarlyDelete-GIR"
+   ],
+   "miss": [
+    {
+     "usageType": "Retrieval-SIA",
+     "service": "Amazon Simple Storage Service"
+    }
+   ]
+  },
+  "cw-metrics": {
+   "offer": "AmazonCloudWatch",
+   "service": "AmazonCloudWatch",
+   "match": [
+    "CW:MetricMonitorUsage",
+    "CW:AlarmMonitorUsage",
+    "CW:HighResAlarmMonitorUsage",
+    "CW:CompositeAlarmMonitorUsage"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-CW:MetricStreamUsage",
+     "service": "AmazonCloudWatch"
+    }
+   ]
+  },
+  "cw-logs-storage": {
+   "offer": "AmazonCloudWatch",
+   "service": "AmazonCloudWatch",
+   "match": [
+    "USE1-TimedStorage-ByteHrs"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-TimedStorage-ByteHrs",
+     "service": "Amazon EC2 Container Registry (ECR)"
+    }
+   ]
+  },
+  "cw-api": {
+   "offer": "AmazonCloudWatch",
+   "service": "AmazonCloudWatch",
+   "match": [
+    "CW:GMD-Metrics",
+    "CW:Requests"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-CW:MetricsUsage",
+     "service": "AmazonCloudWatch"
+    }
+   ]
+  },
+  "lambda-provisioned": {
+   "offer": "AWSLambda",
+   "service": "AWS Lambda",
+   "match": [
+    "Lambda-Provisioned-Concurrency",
+    "Lambda-Provisioned-Concurrency-ARM",
+    "Lambda-Provisioned-GB-Second",
+    "Lambda-Provisioned-GB-Second-ARM"
+   ],
+   "miss": [
+    {
+     "usageType": "Lambda-GB-Second-ARM",
+     "service": "AWS Lambda"
+    },
+    {
+     "usageType": "Request",
+     "service": "AWS Lambda"
+    }
+   ]
+  },
+  "lambda-x86": {
+   "offer": "AWSLambda",
+   "service": "AWS Lambda",
+   "match": [
+    "Lambda-GB-Second"
+   ],
+   "miss": [
+    {
+     "usageType": "Lambda-GB-Second-ARM",
+     "service": "AWS Lambda"
+    },
+    {
+     "usageType": "Lambda-Edge-GB-Second",
+     "service": "AWS Lambda"
+    }
+   ]
+  },
+  "ddb-provisioned": {
+   "offer": "AmazonDynamoDB",
+   "service": "Amazon DynamoDB",
+   "match": [
+    "ReadCapacityUnit-Hrs",
+    "WriteCapacityUnit-Hrs",
+    "IA-ReadCapacityUnit-Hrs"
+   ],
+   "miss": [
+    {
+     "usageType": "ReadRequestUnits",
+     "service": "Amazon DynamoDB"
+    },
+    {
+     "usageType": "ReplWriteCapacityUnit-Hrs",
+     "service": "Amazon DynamoDB"
+    }
+   ]
+  },
+  "ddb-backups": {
+   "offer": "AmazonDynamoDB",
+   "service": "Amazon DynamoDB",
+   "match": [
+    "USE1-TimedBackupStorage-ByteHrs",
+    "USE1-TimedPITRStorage-ByteHrs"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-RestoreDataSize-Bytes",
+     "service": "Amazon DynamoDB"
+    }
+   ]
+  },
+  "elasticache-old-gen": {
+   "offer": "AmazonElastiCache",
+   "service": "Amazon ElastiCache",
+   "match": [
+    "NodeUsage:cache.m4.large",
+    "NodeUsage:cache.r4.large",
+    "NodeUsage:cache.t2.medium"
+   ],
+   "miss": [
+    {
+     "usageType": "NodeUsage:cache.m5.large",
+     "service": "Amazon ElastiCache"
+    },
+    {
+     "usageType": "NodeUsage:cache.t3.medium",
+     "service": "Amazon ElastiCache"
+    }
+   ]
+  },
+  "opensearch-old-gen": {
+   "offer": "AmazonES",
+   "service": "Amazon OpenSearch Service",
+   "match": [
+    "ESInstance:m3.large",
+    "ESInstance:r4.large",
+    "ESInstance:t2.small",
+    "ESInstance:c4.large",
+    "ESInstance:i2.xlarge",
+    "ESInstance:m4.large",
+    "ESInstance:r3.large"
+   ],
+   "miss": [
+    {
+     "usageType": "ESInstance:m5.large",
+     "service": "Amazon OpenSearch Service"
+    },
+    {
+     "usageType": "ESInstance:r6g.large",
+     "service": "Amazon OpenSearch Service"
+    }
+   ]
+  },
+  "redshift-old-gen": {
+   "offer": "AmazonRedshift",
+   "service": "Amazon Redshift",
+   "match": [
+    "Node:dc2.large",
+    "Node:dc2.8xlarge"
+   ],
+   "miss": [
+    {
+     "usageType": "Node:ra3.xlplus",
+     "service": "Amazon Redshift"
+    },
+    {
+     "usageType": "RMS:ra3.xlplus",
+     "service": "Amazon Redshift"
+    }
+   ]
+  },
+  "vpc-endpoints": {
+   "offer": "AmazonVPC",
+   "service": "Amazon Virtual Private Cloud",
+   "match": [
+    "USE1-VpcEndpoint-Hours",
+    "USE1-VpcEndpoint-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-VpcEndpoint-GWLBE-Hours",
+     "service": "Amazon Virtual Private Cloud"
+    }
+   ]
+  },
+  "tgw": {
+   "offer": "AmazonVPC",
+   "service": "Amazon Virtual Private Cloud",
+   "match": [
+    "USE1-TransitGateway-Hours",
+    "USE1-TransitGateway-Bytes"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-VpcPeering-In-Bytes",
+     "service": "Amazon Virtual Private Cloud"
+    }
+   ]
+  },
+  "eks-clusters": {
+   "offer": "AmazonEKS",
+   "service": "Amazon Elastic Container Service for Kubernetes",
+   "match": [
+    "USE1-AmazonEKS-Hours:perCluster"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-AmazonEKS-Local-Outposts-Hours:perCluster",
+     "service": "Amazon Elastic Container Service for Kubernetes"
+    }
+   ]
+  },
+  "ecr-storage": {
+   "offer": "AmazonECR",
+   "service": "Amazon EC2 Container Registry (ECR)",
+   "match": [
+    "TimedStorage-ByteHrs"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-TimedStorage-Archive-ByteHrs",
+     "service": "Amazon EC2 Container Registry (ECR)"
+    }
+   ]
+  },
+  "kms": {
+   "offer": "awskms",
+   "service": "AWS Key Management Service",
+   "match": [
+    "us-east-1-KMS-Keys",
+    "us-east-1-KMS-Requests"
+   ],
+   "miss": [
+    {
+     "usageType": "us-east-1-KMS-Requests-Asymmetric",
+     "service": "AWS Key Management Service"
+    }
+   ]
+  },
+  "secrets": {
+   "offer": "AWSSecretsManager",
+   "service": "AWS Secrets Manager",
+   "match": [
+    "USE1-AWSSecretsManager-Secrets"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-AWSSecretsManagerAPIRequest",
+     "service": "AWS Secrets Manager"
+    }
+   ]
+  },
+  "cloudtrail-events": {
+   "offer": "AWSCloudTrail",
+   "service": "AWS CloudTrail",
+   "match": [
+    "USE1-PaidEventsRecorded",
+    "USE1-DataEventsRecorded"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-FreeEventsRecorded",
+     "service": "AWS CloudTrail"
+    },
+    {
+     "usageType": "USE1-InsightsEvents",
+     "service": "AWS CloudTrail"
+    }
+   ]
+  },
+  "config": {
+   "offer": "AWSConfig",
+   "service": "AWS Config",
+   "match": [
+    "ConfigurationItemRecorded",
+    "USE1-ConfigurationItemRecordedDaily",
+    "USE1-ConfigRuleEvaluations",
+    "USE1-ConformancePackEvaluations"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-CustomConfigItemRecorded",
+     "service": "AWS Config"
+    },
+    {
+     "usageType": "USE1-ConfigRuleEvaluationInternal",
+     "service": "AWS Config"
+    }
+   ]
+  },
+  "kinesis-shards": {
+   "offer": "AmazonKinesis",
+   "service": "Amazon Kinesis",
+   "match": [
+    "Storage-ShardHour",
+    "Extended-ShardHour"
+   ],
+   "miss": [
+    {
+     "usageType": "OnDemand-StreamHour",
+     "service": "Amazon Kinesis"
+    },
+    {
+     "usageType": "PutRequestPayloadUnits",
+     "service": "Amazon Kinesis"
+    }
+   ]
+  },
+  "sagemaker-hours": {
+   "offer": "AmazonSageMaker",
+   "service": "Amazon SageMaker",
+   "match": [
+    "USE1-Host:ml.m5.xlarge",
+    "USE1-Notebk:ml.t3.medium"
+   ],
+   "miss": [
+    {
+     "usageType": "USE1-Train:ml.m5.xlarge",
+     "service": "Amazon SageMaker"
+    }
+   ]
+  }
+ }
+}

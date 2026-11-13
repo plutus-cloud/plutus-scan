@@ -1,0 +1,24 @@
+◆ plutus-scan  [1 Overview]  2 Drivers  3 Anomalies      2026-08-02 → 2026-10-30
+╭─ Last 30 days ───╮ ╭─ Change ────────╮ ╭─ Forecast ──────╮ ╭─ Commitments ───╮
+│ $49,733          │ │ ▲ +$3,283       │ │ $51,326         │ │ $7,800          │
+╰──────────────────╯ ╰─────────────────╯ ╰─────────────────╯ ╰─────────────────╯
+Last 30 days: $49,733 ($40,500 cloud, $7,800 commitments, $1,433 AI), +7% vs the
+previous 30.
+Biggest mover: AWS Amazon Relational Database Service /
+InstanceUsage:db.r6g.xlarge +$1,476.
+Projected October total: $51,326.
+╭─ Daily spend ───────────────────────────────── peak $3,583 · avg $1,524/day ─╮
+│ $3,583 │                                                                     │
+│  $0.00 │▅▓▓▓▓▅▒▓▓▓▓▓▓▓▓█▅▓▓▓▓▅▓▞▞▞▞▞▞▞▞▞▞▞█▞▞▒▞▞▞▞▒▞▞▞▞▞▞██▒▞▞██▒█▒████▞▞███ │
+│        └                                                         ▲           │
+│         2026-08-02                   2026-09-15                   2026-10-30 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Totals, 90 days  cloud $111,188  commitments $22,340  AI $3,865  total $137,392
+Top movers
+  ▲ AWS Amazon Relational Database Service / InstanceUsage:db.r6g.xlar…  +$1,476
+  ▲ AWS Amazon Elastic Compute Cloud / BoxUsage:m7g.xlarge                 +$819
+  ▲ AWS EC2 - Other / NatGateway-Bytes                                     +$397
+  Largest anomaly  +$291 on 2026-10-17, AWS EC2 - Other
+Last complete day: 2026-10-30. Currency: USD.
+
+←→ tabs  ↑↓/jk move  enter open  esc back  h html  q quit

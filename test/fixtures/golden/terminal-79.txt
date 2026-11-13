@@ -1,0 +1,51 @@
+plutus-scan 0.1.0  2026-07-31 to 2026-10-28 (90 days)
+
+Headline
+Last 30 days: $19,404 ($19,404 cloud, $0.00 AI), +13% vs the previous 30.
+Biggest mover: AWS Amazon Elastic Compute Cloud / BoxUsage:m7g.large +$1,238.
+Projected October total: $20,143.
+Last 30 days    $19,404 (cloud $19,404, AI $0.00)
+Previous 30     $17,135, change +$2,269 (+13%)
+Top movers      AWS Amazon Elastic Compute Cloud / BoxUsage:m7g.large +$1,238
+                Azure Virtual Machines / D4s v5 usage +$432
+                Azure Azure SQL Database / Gen Purpose compute +$216
+Largest anomaly +$532 on 2026-10-13, AWS Amazon Elastic Compute Cloud
+Month-end       $20,143 projected for 2026-10
+
+Daily spend
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂█▃▃▃▃▃▃▃▃▃▃▃▃
+2026-07-31 to 2026-10-28, peak $1,147 a day
+
+Top drivers (last 30 days against the previous 30)
+AWS Amazon Elastic Compute Cloud                                        +$1,238
+  USE1-BoxUsage:m7g.large                                               +$1,238
+Azure Virtual Machines                                                    +$432
+  D4s v5 usage                                                            +$432
+Azure Azure SQL Database                                                  +$216
+  Gen Purpose compute                                                     +$216
+AWS Amazon Simple Storage Service                                         +$149
+  USE1-TimedStorage-ByteHrs                                               +$144
+  Promotional credit                                                     +$4.66
+AWS EC2 - Other                                                           +$126
+  USE1-NatGateway-Bytes                                                 +$72.00
+  USE1-EBS:VolumeUsage.gp2                                              +$54.00
+
+Anomalies
+2026-10-13 AWS Amazon Elastic Compute Cloud                               +$532
+
+Candidates to review
+Possible savings: up to $584 in 30 days if it is waste. The bill cannot say.
+Often worth changing
+gp2 volumes                                                     $584 in 30 days
+  gp3 is usually about 20% cheaper
+  If this is waste, Plutus can open the pull request that fixes it.
+Worth a look
+S3 Standard storage                                           $1,558 in 30 days
+  Data that is rarely read can sit in a cheaper class
+NAT gateway                                                     $779 in 30 days
+  Often traffic that could use VPC endpoints
+  https://plutus-cloud.com/?utm_source=plutus-scan&utm_medium=cli
+
+Notes and basis
+FOCUS: BilledCost, including credit and tax rows when present.
+Last complete day: 2026-10-28. Currency: USD.

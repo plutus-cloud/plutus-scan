@@ -1,0 +1,63 @@
+{
+  "GroupDefinitions": [],
+  "ResultsByTime": [
+    {
+      "TimePeriod": {
+        "Start": "2026-09-29",
+        "End": "2026-10-29"
+      },
+      "Total": {},
+      "Estimated": true,
+      "Groups": [
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "BoxUsage:m5.large"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "90",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "DataTransfer-Out-Bytes"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "10",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Relational Database Service",
+            "InstanceUsage:db.r5.large"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "80",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "AWS Lambda",
+            "Request"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "0",
+              "Unit": "USD"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "GroupDefinitions": [],
+  "ResultsByTime": [
+    {
+      "TimePeriod": {
+        "Start": "2026-09-11",
+        "End": "2026-09-11"
+      },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "20",
+              "Unit": "USD"
+            }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": {
+        "Start": "2026-10-01",
+        "End": "2026-10-01"
+      },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "Recurring"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "18",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "RIFee"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "12",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "SavingsPlanCoveredUsage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "12",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "SavingsPlanNegation"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "-12",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Savings Plans for AWS Compute usage",
+            "SavingsPlanRecurringFee"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "25",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Tax",
+            "Tax"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "2.5",
+              "Unit": "USD"
+            }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": {
+        "Start": "2026-10-27",
+        "End": "2026-10-27"
+      },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "60",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Simple Storage Service",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "10",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Amazon Relational Database Service",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "80",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "AWS Lambda",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "5",
+              "Unit": "USD"
+            }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": {
+        "Start": "2026-10-28",
+        "End": "2026-10-28"
+      },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": [
+            "Amazon Elastic Compute Cloud - Compute",
+            "Usage"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "40",
+              "Unit": "USD"
+            }
+          }
+        }
+      ],
+      "Estimated": false
+    }
+  ]
+}

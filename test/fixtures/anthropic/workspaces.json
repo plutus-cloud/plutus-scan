@@ -1,0 +1,8 @@
+{
+  "data": [
+    { "id": "wrkspc_01", "type": "workspace", "name": "Production" }
+  ],
+  "has_more": false,
+  "first_id": "wrkspc_01",
+  "last_id": "wrkspc_01"
+}

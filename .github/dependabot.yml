@@ -1,0 +1,24 @@
+version: 2
+updates:
+  # The one runtime dependency (hyparquet). It is pinned to an exact version in package.json, so
+  # every change arrives as a pull request that runs the tests. Security updates are not held to
+  # this schedule: GitHub opens those as soon as an advisory lands.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+
+  # Action pins in .github/workflows. They are pinned by commit, so nothing moves unless a pull
+  # request moves it.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"

@@ -1,0 +1,37 @@
+{
+  "GroupDefinitions": [],
+  "ResultsByTime": [
+    {
+      "TimePeriod": {
+        "Start": "2026-09-29",
+        "End": "2026-10-29"
+      },
+      "Total": {},
+      "Estimated": true,
+      "Groups": [
+        {
+          "Keys": [
+            "Team$"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "40",
+              "Unit": "USD"
+            }
+          }
+        },
+        {
+          "Keys": [
+            "Team$web"
+          ],
+          "Metrics": {
+            "UnblendedCost": {
+              "Amount": "60",
+              "Unit": "USD"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "CostAllocationTags": [
+    {
+      "TagKey": "Team",
+      "Type": "UserDefined",
+      "Status": "Active"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+◆ plutus-scan  [1 Overview]  2 Drivers  3 Anomalies      2026-07-31 → 2026-10-28
+╭─ Last 30 days ───╮ ╭─ Change ────────╮ ╭─ Forecast ──────╮ ╭─ Commitments ───╮
+│ $19,404          │ │ ▲ +$2,269       │ │ $20,143         │ │ none            │
+╰──────────────────╯ ╰─────────────────╯ ╰─────────────────╯ ╰─────────────────╯
+Last 30 days: $19,404 ($19,404 cloud, $0.00 AI), +13% vs the previous 30.
+Biggest mover: AWS Amazon Elastic Compute Cloud / BoxUsage:m7g.large +$1,238.
+Projected October total: $20,143.
+╭─ Daily spend ─────────────────────────────────── peak $1,147 · avg $577/day ─╮
+│ $1,147 │                                                        █            │
+│        │                                          ▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▂▂▂▂▂▂▂▂▂▂▂ │
+│        │▆▆▆▆▆▆▆▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇████████████████████████████████████████ │
+│  $0.00 │████████████████████████████████████████████████████████████████████ │
+│        └                                                       ▲             │
+│         2026-07-31                   2026-09-13                   2026-10-28 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Totals, 90 days  cloud $51,933  AI $0.00  total $51,933
+Top movers
+  ▲ AWS Amazon Elastic Compute Cloud / BoxUsage:m7g.large                +$1,238
+  ▲ Azure Virtual Machines / D4s v5 usage                                  +$432
+  ▲ Azure Azure SQL Database / Gen Purpose compute                         +$216
+  Largest anomaly  +$532 on 2026-10-13, AWS Amazon Elastic Compute Cloud
+Last complete day: 2026-10-28. Currency: USD.
+
+←→ tabs  ↑↓/jk move  enter open  esc back  h html  q quit

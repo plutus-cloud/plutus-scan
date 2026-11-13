@@ -1,0 +1,818 @@
+{
+ "source": "Strings recorded per rule for the Azure and Google Cloud candidate rules (src/analysis/candidate-rules-focus.js). A rule matches a row by ServiceName (service) and ChargeDescription (the row model usageType). \"match\" entries are strings copied from the source named in the rule, \"miss\" entries are nearby real strings, or a real description under a different service where noted, that the rule must not match. Azure strings come from the official FOCUS 1.0 sample data (CC BY 4.0, see test/fixtures/focus/official-sample.NOTICE.md); that sample has only two Google Cloud rows, so most Google Cloud strings come from Google's own documentation, fetched 2026-11-12.",
+ "notCovered": "Azure FOCUS exports carry x_SkuMeterCategory, x_SkuMeterSubcategory, x_SkuMeterName, x_SkuDescription and x_ResourceType (Microsoft FOCUS cost export documentation), but the sample data has none of these columns, so no rule matches on them. A FOCUS row cannot say whether a disk or address is attached, so none of these rules is evidence of an idle resource except the Cloud SQL idle address, which Google names in the SKU.",
+ "dropped": {
+  "azure-nat-gateway": "No NAT Gateway description in the Azure sample data.",
+  "azure-old-disk-tiers-unattached": "Azure billing does not say a managed disk is unattached; only the disk tier is visible.",
+  "azure-premium-ssd-v2 / ultra disk": "No such description in the sample data.",
+  "azure-bandwidth-other": "Only the inter-region and routing-preference transfer lines were seen.",
+  "gcp-pd-ssd": "\"SSD backed PD Capacity\" was not found in any sample row or Google page fetched. \"Balanced PD Capacity\" was seen but is the default disk type, not a signal.",
+  "gcp-external-ip-in-use": "The SKU description of an in-use external IP address was not found in the sample data or the Google pages fetched.",
+  "gcp-cloud-logging-ingestion": "The SKU description for log ingestion was not found. Google's pricing page describes the charge in prose only.",
+  "gcp-network-egress": "No current internet or inter-region egress description was found; the legacy list has only Cloud Storage and Cloud SQL era names.",
+  "gcp-older-machine-families": "Only N1 had a description in a Google page; other families were not found."
+ },
+ "rules": {
+  "azure-old-vm-series": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Virtual Machines Dsv4 Series - D4s v4 - US East",
+     "serviceName": "Virtual Machine Scale Sets",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv2/DSv2 Series - D11 v2/DS11 v2 - US East 2",
+     "serviceName": "Azure Machine Learning",
+     "rows": 52
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv2/DSv2 Series - D12 v2/DS12 v2 - US West 2",
+     "serviceName": "Virtual Machines",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv2/DSv2 Series - D2 v2/DS2 v2 - US Central",
+     "serviceName": "Virtual Machine Scale Sets",
+     "rows": 5
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv2/DSv2 Series - D2 v2/DS2 v2 - US East",
+     "serviceName": "Virtual Machine Scale Sets",
+     "rows": 17
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv2/DSv2 Series - D4 v2/DS4 v2 - US West",
+     "serviceName": "Virtual Machines",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv3/DSv3 Series - D2 v3/D2s v3 - US East",
+     "serviceName": "Virtual Machines",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv3/DSv3 Series - D2 v3/D2s v3 - US South Central",
+     "serviceName": "Virtual Machines",
+     "rows": 7
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv3/DSv3 Series - D4 v3/D4s v3 - AP East",
+     "serviceName": "Virtual Machines",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Virtual Machines Dv3/DSv3 Series - D8 v3/D8s v3 - CA Central",
+     "serviceName": "Virtual Machines",
+     "rows": 1
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Virtual Machines BS Series - B2ms - US East",
+     "serviceName": "Virtual Machines"
+    },
+    {
+     "chargeDescription": "Azure Database for MySQL Flexible Server General Purpose Ddsv4 Series Compute - 1 vCore - vCore - US East",
+     "serviceName": "Azure DB for MySQL"
+    }
+   ]
+  },
+  "azure-hdd-disks": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Standard HDD Managed Disks - S10 - LRS - Disk - US Central",
+     "serviceName": "Virtual Machines",
+     "rows": 5
+    },
+    {
+     "chargeDescription": "Standard HDD Managed Disks - S10 - LRS - Disk - US West",
+     "serviceName": "Virtual Machines",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Standard HDD Managed Disks - S20 - LRS - Disk - US West",
+     "serviceName": "Virtual Machines",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Standard HDD Managed Disks - S4 - LRS - Disk - US North Central",
+     "serviceName": "Virtual Machines",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Standard HDD Managed Disks - S4 - LRS - Disk Operations",
+     "serviceName": "Azure Machine Learning",
+     "rows": 42
+    },
+    {
+     "chargeDescription": "Standard HDD Managed Disks - S50 - LRS - Disk - FR Central",
+     "serviceName": "Virtual Machines",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Standard HDD Managed Disks - S6 - LRS - Disk - US East 2",
+     "serviceName": "Azure Machine Learning",
+     "rows": 60
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Standard SSD Managed Disks - E4 - LRS - Disk Operations",
+     "serviceName": "Virtual Machines"
+    },
+    {
+     "chargeDescription": "Standard Page Blob - Disk Read Operations",
+     "serviceName": "Storage Accounts"
+    }
+   ]
+  },
+  "azure-premium-disks": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - AP Southeast",
+     "serviceName": "Virtual Machines",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - FR Central",
+     "serviceName": "Virtual Machines",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - UK West",
+     "serviceName": "Virtual Machines",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - US Central",
+     "serviceName": "Virtual Machines",
+     "rows": 6
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - US East",
+     "serviceName": "Virtual Machines",
+     "rows": 43
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - US East 2",
+     "serviceName": "Azure Machine Learning",
+     "rows": 46
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - US West",
+     "serviceName": "Virtual Machines",
+     "rows": 4
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - US West 2",
+     "serviceName": "Virtual Machines",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P20 LRS - UK West",
+     "serviceName": "Virtual Machines",
+     "rows": 6
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P30 LRS - US West",
+     "serviceName": "Virtual Machines",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P30 LRS - US West 2",
+     "serviceName": "Virtual Machines",
+     "rows": 9
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P4 LRS - AP East",
+     "serviceName": "Virtual Machines",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P4 LRS - UK West",
+     "serviceName": "Virtual Machines",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P4 LRS - US East",
+     "serviceName": "Virtual Machines",
+     "rows": 7
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P4 LRS - US East 2",
+     "serviceName": "Virtual Machines",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P4 LRS - US South Central",
+     "serviceName": "Virtual Machines",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P4 LRS - US West",
+     "serviceName": "Virtual Machines",
+     "rows": 4
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P4 LRS - US West 2",
+     "serviceName": "Virtual Machines",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P6 LRS - US East 2",
+     "serviceName": "Azure Machine Learning",
+     "rows": 60
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Standard SSD Managed Disks - E2 - LRS - Disk - US East",
+     "serviceName": "Virtual Machines"
+    },
+    {
+     "chargeDescription": "Premium Page Blob - P10 LRS - Disk - US Central",
+     "serviceName": "Storage Accounts"
+    }
+   ]
+  },
+  "azure-page-blob-disks": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Premium Page Blob - P10 LRS - Disk - US Central",
+     "serviceName": "Storage Accounts",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Premium Page Blob - P10 LRS - Disk - US North Central",
+     "serviceName": "Storage Accounts",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Standard Page Blob - Disk Read Operations",
+     "serviceName": "Storage Accounts",
+     "rows": 5
+    },
+    {
+     "chargeDescription": "Standard Page Blob - Disk Write Operations",
+     "serviceName": "Storage Accounts",
+     "rows": 3
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Standard Page Blob v2 - LRS Data Stored - US Central",
+     "serviceName": "Storage Accounts"
+    },
+    {
+     "chargeDescription": "Premium Page Blob - P10 LRS - Disk - US Central",
+     "serviceName": "Virtual Machines",
+     "note": "real description under another service, to test the service gate"
+    }
+   ]
+  },
+  "azure-public-ip": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "IP Addresses - Basic IPv4 Dynamic Public IP",
+     "serviceName": "Virtual Network",
+     "rows": 12
+    },
+    {
+     "chargeDescription": "IP Addresses - Basic IPv4 Dynamic Public IP - Dev/Test",
+     "serviceName": "Virtual Network",
+     "rows": 4
+    },
+    {
+     "chargeDescription": "IP Addresses - Basic IPv4 Static Public IP",
+     "serviceName": "Virtual Network",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "IP Addresses - Standard IPv4 Static Public IP",
+     "serviceName": "Virtual Network",
+     "rows": 61
+    },
+    {
+     "chargeDescription": "IP Addresses - Standard IPv4 Static Public IP - Dev/Test",
+     "serviceName": "Azure Machine Learning",
+     "rows": 147
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Virtual Network Private Link - Standard Private Endpoint",
+     "serviceName": "Azure Private Link"
+    },
+    {
+     "chargeDescription": "Load Balancer - Standard Data Processed",
+     "serviceName": "Load Balancer"
+    }
+   ]
+  },
+  "azure-log-ingestion": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Log Analytics - Pay-as-you-go Data Ingestion",
+     "serviceName": "Azure Monitor",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Log Analytics - Pay-as-you-go Data Ingestion - US West",
+     "serviceName": "Azure Monitor",
+     "rows": 1
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Log Analytics - Pay-as-you-go Data Retention",
+     "serviceName": "Azure Monitor"
+    },
+    {
+     "chargeDescription": "Log Analytics - Pay-as-you-go Data Ingestion",
+     "serviceName": "Virtual Machines",
+     "note": "real description under another service, to test the service gate"
+    }
+   ]
+  },
+  "azure-log-retention": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Log Analytics - Pay-as-you-go Data Retention",
+     "serviceName": "Azure Monitor",
+     "rows": 5
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Log Analytics - Pay-as-you-go Data Analyzed",
+     "serviceName": "Azure Monitor"
+    },
+    {
+     "chargeDescription": "Log Analytics - Pay-as-you-go Data Retention",
+     "serviceName": "Storage Accounts",
+     "note": "real description under another service, to test the service gate"
+    }
+   ]
+  },
+  "azure-inter-region": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Bandwidth Inter-Region - Inter Continent Data Transfer Out - ASIA To Any - Intercontinental",
+     "serviceName": "Storage Accounts",
+     "rows": 3
+    },
+    {
+     "chargeDescription": "Bandwidth Inter-Region - Inter Continent Data Transfer Out - NAM or EU To Any - Intercontinental",
+     "serviceName": "Virtual Machine Scale Sets",
+     "rows": 20
+    },
+    {
+     "chargeDescription": "Bandwidth Inter-Region - Intra Continent Data Transfer Out - Asia",
+     "serviceName": "Virtual Machines",
+     "rows": 5
+    },
+    {
+     "chargeDescription": "Bandwidth Inter-Region - Intra Continent Data Transfer Out - Europe",
+     "serviceName": "Storage Accounts",
+     "rows": 2
+    },
+    {
+     "chargeDescription": "Bandwidth Inter-Region - Intra Continent Data Transfer Out - North America",
+     "serviceName": "Azure Machine Learning",
+     "rows": 209
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Rtn Preference: MGN - Standard Data Transfer Out",
+     "serviceName": "Virtual Machines"
+    },
+    {
+     "chargeDescription": "Storage - Bandwidth - Geo-Replication Data Transfer - US East",
+     "serviceName": "Storage Accounts"
+    }
+   ]
+  },
+  "azure-egress": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Rtn Preference: MGN - Standard Data Transfer Out",
+     "serviceName": "Virtual Machine Scale Sets",
+     "rows": 35
+    },
+    {
+     "chargeDescription": "Rtn Preference: MGN - Standard Data Transfer Out - AU East",
+     "serviceName": "Virtual Machines",
+     "rows": 3
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Bandwidth Inter-Region - Intra Continent Data Transfer Out - North America",
+     "serviceName": "Virtual Machines"
+    },
+    {
+     "chargeDescription": "Rtn Preference: MGN - Standard Data Transfer In",
+     "serviceName": "Virtual Machines",
+     "note": "real description under another service, to test the service gate"
+    }
+   ]
+  },
+  "azure-vpn-gateway": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "VPN Gateway - VpnGw1 - Gateway",
+     "serviceName": "Virtual Network",
+     "rows": 4
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "ExpressRoute - Premium - Metered Data - 50 Mbps Circuit - Zone 1",
+     "serviceName": "Azure ExpressRoute"
+    },
+    {
+     "chargeDescription": "Application Gateway Standard v2 - Capacity Units - US East",
+     "serviceName": "Application Gateway"
+    }
+   ]
+  },
+  "azure-backup": {
+   "provider": "azure",
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of Microsoft rows",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (4,964 Microsoft rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Backup - Azure VM - Protected Instances - AP Southeast",
+     "serviceName": "Azure Site Recovery",
+     "rows": 1
+    },
+    {
+     "chargeDescription": "Backup - GRS Data Stored - AP Southeast",
+     "serviceName": "Azure Site Recovery",
+     "rows": 2
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Application Gateway Standard v2 - Capacity Units - US East",
+     "serviceName": "Application Gateway"
+    },
+    {
+     "chargeDescription": "Premium SSD Managed Disks - P10 LRS - US East",
+     "serviceName": "Virtual Machines"
+    }
+   ]
+  },
+  "gcp-sql-idle-ip": {
+   "source": {
+    "kind": "provider-doc",
+    "where": "Cloud SQL rows of the legacy SKU list: CP-CLOUDSQL-STATIC-IP-CHARGE (BE24-C6A5-0405, F1AD-753F-79B7, D6A2-F561-752F) and CP-CLOUDSQL-PG-STATIC-IP-CHARGE (9F2E-D4D5-1E0F). The list names the service Google Cloud SQL",
+    "url": "https://cloud.google.com/skus/legacy-ids",
+    "fetched": "2026-11-12"
+   },
+   "match": [
+    {
+     "chargeDescription": "IP address idling - hour",
+     "serviceName": "Cloud SQL"
+    },
+    {
+     "chargeDescription": "IP address idling in seconds",
+     "serviceName": "Cloud SQL"
+    },
+    {
+     "chargeDescription": "IP address idling in seconds in Japan",
+     "serviceName": "Cloud SQL"
+    },
+    {
+     "chargeDescription": "IP address idling in seconds in Northern Virginia",
+     "serviceName": "Cloud SQL"
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "IP address idling in seconds",
+     "serviceName": "Compute Engine",
+     "note": "real description under another service, to test the service gate"
+    },
+    {
+     "chargeDescription": "Static Ip Charge",
+     "serviceName": "Compute Engine"
+    },
+    {
+     "chargeDescription": "Storage PD SSD",
+     "serviceName": "Cloud SQL"
+    }
+   ],
+   "provider": "gcp"
+  },
+  "gcp-static-ip": {
+   "source": {
+    "kind": "provider-doc",
+    "where": "Compute Engine row CP-COMPUTEENGINE-STATIC-IP-CHARGE, SKU 66A2-68EA-56BE",
+    "url": "https://cloud.google.com/skus/legacy-ids",
+    "fetched": "2026-11-12"
+   },
+   "match": [
+    {
+     "chargeDescription": "Static Ip Charge",
+     "serviceName": "Compute Engine"
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "IP address idling - hour",
+     "serviceName": "Cloud SQL"
+    },
+    {
+     "chargeDescription": "PD IO Requests",
+     "serviceName": "Compute Engine"
+    }
+   ],
+   "provider": "gcp"
+  },
+  "gcp-pd-standard": {
+   "source": {
+    "kind": "provider-doc",
+    "where": "Compute Engine row CP-COMPUTEENGINE-STORAGE-PD-CAPACITY, SKU D973-5D65-BAB2",
+    "url": "https://cloud.google.com/skus/legacy-ids",
+    "fetched": "2026-11-12"
+   },
+   "match": [
+    {
+     "chargeDescription": "Storage PD Capacity",
+     "serviceName": "Compute Engine"
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Balanced PD Capacity",
+     "serviceName": "Compute Engine",
+     "source": "https://cloud.google.com/billing/docs/how-to/bq-examples"
+    },
+    {
+     "chargeDescription": "Storage PD Capacity",
+     "serviceName": "Cloud SQL",
+     "note": "real description under another service, to test the service gate"
+    },
+    {
+     "chargeDescription": "SSD backed Local Storage",
+     "serviceName": "Compute Engine"
+    }
+   ],
+   "provider": "gcp"
+  },
+  "gcp-pd-snapshots": {
+   "source": {
+    "kind": "provider-doc",
+    "where": "Compute Engine and Cloud SQL rows CP-COMPUTEENGINE-STORAGE-PD-SNAPSHOT and CP-CLOUDSQL-STORAGE-PD-SNAPSHOT, both SKU 66AB-BA17-351C",
+    "url": "https://cloud.google.com/skus/legacy-ids",
+    "fetched": "2026-11-12"
+   },
+   "match": [
+    {
+     "chargeDescription": "Storage PD Snapshot",
+     "serviceName": "Compute Engine"
+    },
+    {
+     "chargeDescription": "Storage PD Snapshot",
+     "serviceName": "Cloud SQL"
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Storage PD SSD",
+     "serviceName": "Cloud SQL"
+    },
+    {
+     "chargeDescription": "Storage Image",
+     "serviceName": "Compute Engine"
+    }
+   ],
+   "provider": "gcp"
+  },
+  "gcp-nat": {
+   "source": {
+    "kind": "provider-doc",
+    "where": "Pricing page, table \"SKU groups - NAT gateway\": SKU names with SKU IDs 8515-9425-D2CE, 015F-5732-FFF0, 32E2-4EFC-EF9F, 6B7A-B4EC-BCA5, AAF7-1D17-BFC4",
+    "url": "https://cloud.google.com/nat/pricing",
+    "fetched": "2026-11-12"
+   },
+   "match": [
+    {
+     "chargeDescription": "Networking Cloud NAT IP usage",
+     "serviceName": "Networking"
+    },
+    {
+     "chargeDescription": "Networking Cloud NAT data processing",
+     "serviceName": "Networking"
+    },
+    {
+     "chargeDescription": "Networking Cloud NAT gateway uptime",
+     "serviceName": "Networking"
+    },
+    {
+     "chargeDescription": "Networking Private NAT data processing",
+     "serviceName": "Networking"
+    },
+    {
+     "chargeDescription": "Networking Private NAT gateway uptime",
+     "serviceName": "Networking"
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Cloud Load Balancer Forwarding Rule Minimum Global",
+     "serviceName": "Networking",
+     "source": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz"
+    },
+    {
+     "chargeDescription": "Cloud Tasks Network Intra Region Egress",
+     "serviceName": "Cloud Tasks",
+     "source": "https://cloud.google.com/billing/docs/how-to/bq-examples"
+    }
+   ],
+   "provider": "gcp"
+  },
+  "gcp-n1": {
+   "source": {
+    "kind": "provider-doc",
+    "where": "Sample output rows of the example queries (service Compute Engine)",
+    "url": "https://cloud.google.com/billing/docs/how-to/bq-examples",
+    "fetched": "2026-11-12"
+   },
+   "match": [
+    {
+     "chargeDescription": "N1 Predefined Instance Core running in Americas",
+     "serviceName": "Compute Engine"
+    },
+    {
+     "chargeDescription": "N1 Predefined Instance Ram running in Americas",
+     "serviceName": "Compute Engine"
+    },
+    {
+     "chargeDescription": "N1 Predefined Instance Ram running in Virginia",
+     "serviceName": "Compute Engine"
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "E2 Instance Core running in Americas",
+     "serviceName": "Compute Engine"
+    },
+    {
+     "chargeDescription": "Sole Tenancy Instance Ram running in Virginia",
+     "serviceName": "Compute Engine"
+    },
+    {
+     "chargeDescription": "Sole Tenancy Premium for Sole Tenancy Instance Ram running in Virginia",
+     "serviceName": "Compute Engine"
+    }
+   ],
+   "provider": "gcp"
+  },
+  "gcp-lb-forwarding": {
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of a Google Cloud row (ServiceName Networking, SkuId DEE3-C42E-3E4D)",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (2 Google Cloud rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Cloud Load Balancer Forwarding Rule Minimum Global",
+     "serviceName": "Networking",
+     "rows": 1
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Networking Cloud NAT gateway uptime",
+     "serviceName": "Networking",
+     "source": "https://cloud.google.com/nat/pricing"
+    },
+    {
+     "chargeDescription": "Artifact Registry Storage",
+     "serviceName": "Artifact Registry",
+     "source": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz"
+    }
+   ],
+   "provider": "gcp"
+  },
+  "gcp-artifact-registry": {
+   "source": {
+    "kind": "sample-data",
+    "where": "ChargeDescription of a Google Cloud row (ServiceName Artifact Registry, SkuId 8502-299A-ABAF)",
+    "url": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz",
+    "fetched": "2026-11-12",
+    "file": "focus_sample_100000.csv.gz (2 Google Cloud rows)"
+   },
+   "match": [
+    {
+     "chargeDescription": "Artifact Registry Storage",
+     "serviceName": "Artifact Registry",
+     "rows": 1
+    }
+   ],
+   "miss": [
+    {
+     "chargeDescription": "Artifact Registry Storage",
+     "serviceName": "Compute Engine",
+     "note": "real description under another service, to test the service gate"
+    },
+    {
+     "chargeDescription": "Cloud Load Balancer Forwarding Rule Minimum Global",
+     "serviceName": "Networking",
+     "source": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data/blob/main/FOCUS-1.0/focus_sample_100000.csv.gz"
+    }
+   ],
+   "provider": "gcp"
+  }
+ }
+}

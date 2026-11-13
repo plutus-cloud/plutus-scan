@@ -1,0 +1,8 @@
+{
+  "object": "list",
+  "data": [
+    { "id": "proj_abc", "object": "organization.project", "name": "Support bot", "status": "active" }
+  ],
+  "has_more": false,
+  "last_id": "proj_abc"
+}
