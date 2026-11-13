@@ -138,13 +138,17 @@ test('a fetch error that quotes a header value is not echoed', async () => {
     (e) => e.message === 'request failed: ECONNREFUSED');
 });
 
-test('a hung request times out as a SourceError', async () => {
+test('a hung request times out as a SourceError', async (t) => {
   /** Never answers; rejects only when the signal aborts. */
   const fetchImpl = (_url, { signal }) => new Promise((_resolve, reject) => {
     signal.addEventListener('abort', () => reject(signal.reason));
   });
-  const t = createTransport({ fetchImpl, timeoutMs: 20 });
-  await assert.rejects(t.http('openai', 'https://api.openai.com/v1/x'),
+  // AbortSignal.timeout does not keep the process alive on its own, and these fakes hold no socket
+  // open the way a real request does, so hold the event loop until the timeouts have fired.
+  const keepAlive = setTimeout(() => {}, 5000);
+  t.after(() => clearTimeout(keepAlive));
+  const transport = createTransport({ fetchImpl, timeoutMs: 20 });
+  await assert.rejects(transport.http('openai', 'https://api.openai.com/v1/x'),
     (e) => e instanceof SourceError && e.source === 'openai' && e.message === 'request timed out');
   // A body that stalls after the headers times out the same way.
   const slowBody = (_url, { signal }) => Promise.resolve({ ok: true, status: 200, statusText: '',
