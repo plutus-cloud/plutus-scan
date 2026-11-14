@@ -79,7 +79,9 @@ test('untagged comes from the empty tag value', async () => {
   const res = await promise;
   assert.deepEqual(res.tagCoverage, [{ provider: 'aws', key: 'Team', taggedCost: 60, untaggedCost: 40 }]);
   const tag = calls.find((a) => a.includes('Type=TAG,Key=Team'));
-  assert.deepEqual(JSON.parse(tag[tag.indexOf('--filter') + 1]), NOT_COMMITMENT);
+  assert.equal(tag[tag.indexOf('--metrics') + 1], 'AmortizedCost');
+  assert.deepEqual(JSON.parse(tag[tag.indexOf('--filter') + 1]), { Not: { Dimensions: { Key: 'RECORD_TYPE',
+    Values: [...COMMITMENT_TYPES, 'SavingsPlanNegation', 'Tax', 'Credit', 'Refund'] } } });
   assert.ok(calls.some((a) => a[1] === 'list-cost-allocation-tags'));
 });
 
@@ -195,7 +197,8 @@ test('describeAws shell-quotes arguments so each line can be pasted', () => {
   assert.ok(d.requests[2].target.includes(`--filter '{"Not":{"Dimensions":{"Key":"RECORD_TYPE","Values":${TYPES_JSON}}}}'`), d.requests[2].target);
   assert.ok(drill.endsWith("--profile 'my profile'"), drill);
   assert.ok(d.requests[4].target.includes("--group-by 'Type=TAG,Key=<active tag key>'"), d.requests[4].target);
-  assert.ok(d.requests[4].target.includes(`--filter '{"Not":{"Dimensions":{"Key":"RECORD_TYPE","Values":${TYPES_JSON}}}}'`), d.requests[4].target);
+  const tagTypes = JSON.stringify([...COMMITMENT_TYPES, 'SavingsPlanNegation', 'Tax', 'Credit', 'Refund']);
+  assert.ok(d.requests[4].target.includes(`--metrics AmortizedCost --filter '{"Not":{"Dimensions":{"Key":"RECORD_TYPE","Values":${tagTypes}}}}'`), d.requests[4].target);
   assert.ok(d.requests[0].target.includes('--group-by Type=DIMENSION,Key=SERVICE Type=DIMENSION,Key=RECORD_TYPE'));
   assert.equal(shellQuote("it's"), `'it'\\''s'`);
 });

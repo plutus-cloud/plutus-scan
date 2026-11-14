@@ -44,6 +44,9 @@ const COMMITMENT_TYPES = new Set(COMMITMENT_RECORD_TYPES.map(norm));
 const RESERVATION_USAGE = /(^|[-:])HeavyUsage|ReservedHostUsage/;
 /** Cost Explorer expression that leaves out the commitment record types. */
 const NOT_COMMITMENT = { Not: { Dimensions: { Key: 'RECORD_TYPE', Values: COMMITMENT_RECORD_TYPES } } };
+/** The commitment fees plus the record types that never carry a tag. */
+const NOT_TAGGABLE = { Not: { Dimensions: { Key: 'RECORD_TYPE',
+  Values: [...COMMITMENT_RECORD_TYPES, 'SavingsPlanNegation', 'Tax', 'Credit', 'Refund'] } } };
 
 /**
  * Kind and readable service label for one daily SERVICE x RECORD_TYPE group. Savings Plan fees keep
@@ -82,13 +85,13 @@ export function shellQuote(arg) {
 const period = (p) => `Start=${p.start},End=${addDays(p.end, 1)}`;
 const dim = (key) => `Type=DIMENSION,Key=${key}`;
 
-/** @param {{start:string,end:string}} p @param {'DAILY'|'MONTHLY'} granularity @param {string[]} groupBy @param {string|null} [filter] @param {string|null} [token] */
-function costArgs(p, granularity, groupBy, filter = null, token = null) {
+/** @param {{start:string,end:string}} p @param {'DAILY'|'MONTHLY'} granularity @param {string[]} groupBy @param {string|null} [filter] @param {string|null} [token] @param {'UnblendedCost'|'AmortizedCost'} [metric] */
+function costArgs(p, granularity, groupBy, filter = null, token = null, metric = 'UnblendedCost') {
   return [
     'ce', 'get-cost-and-usage',
     '--time-period', period(p),
     '--granularity', granularity,
-    '--metrics', 'UnblendedCost',
+    '--metrics', metric,
     ...(filter ? ['--filter', filter] : []),
     '--group-by', ...groupBy,
     ...(token ? ['--next-page-token', token] : []),
@@ -113,9 +116,9 @@ export const candidateArgs = (/** @type {Window} */ w, token = null) =>
 
 export const tagListArgs = () => ['ce', 'list-cost-allocation-tags', '--status', 'Active', '--type', 'UserDefined'];
 
-/** Usage only, like FOCUS tag coverage: commitment fees are left out of the untagged share. */
+/** Usage only, and AmortizedCost unlike every other query: see docs/design.md, step 5. */
 export const tagArgs = (/** @type {Window} */ w, /** @type {string} */ key, token = null) =>
-  costArgs(candidatePeriod(w), 'MONTHLY', [`Type=TAG,Key=${key}`], JSON.stringify(NOT_COMMITMENT), token);
+  costArgs(candidatePeriod(w), 'MONTHLY', [`Type=TAG,Key=${key}`], JSON.stringify(NOT_TAGGABLE), token, 'AmortizedCost');
 
 /** @param {Window} w */
 const clampStart = (w, n) => {
@@ -244,7 +247,7 @@ export async function fetchAws(transport, { window, maxTagKeys = 5, maxRequests 
 
   /** @param {any} g @returns {{ cost: number, currency: string }|null} null for a zero or missing amount */
   const amount = (g) => {
-    const m = g.Metrics?.UnblendedCost;
+    const m = g.Metrics?.UnblendedCost ?? g.Metrics?.AmortizedCost;
     const cost = Number(m?.Amount);
     return !Number.isFinite(cost) || cost === 0 ? null : { cost, currency: currencyCode(m.Unit || 'USD') };
   };
