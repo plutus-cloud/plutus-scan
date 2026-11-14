@@ -12,6 +12,7 @@ import { fetchFocus } from '../src/sources/focus/index.js';
 import { fakeFetch, fixture } from './helpers/http-fake.js';
 
 const bin = fileURLToPath(new URL('../bin/plutus-scan.js', import.meta.url));
+const { version } = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
 const fakeBin = fileURLToPath(new URL('./fixtures/bin', import.meta.url));
 const focusCsv = fileURLToPath(new URL('./fixtures/focus/synthetic.csv', import.meta.url));
 const KEY = 'sk-test-secret';
@@ -294,7 +295,7 @@ test('--json - prints schemaVersion 1 and no summary', async () => {
   assert.equal(r.code, 0, r.stderr);
   const report = JSON.parse(r.stdout);
   assert.equal(report.schemaVersion, 1);
-  assert.equal(report.tool.version, '0.1.0');
+  assert.equal(report.tool.version, version);
   assert.ok(r.stdout.endsWith('}\n'));
 });
 
@@ -324,7 +325,7 @@ test('usage errors exit 2 and help states the price and the trust line', async (
   assert.ok(h.stdout.includes('\n  --max-aws-requests <n>     Optional cap on billed Cost Explorer requests (no cap by default)\n'));
   assert.ok(h.stdout.includes('plutus-scan sends no telemetry and contacts only the providers you configure.\n'));
   const v = await run(['--version']);
-  assert.equal(v.stdout, '0.1.0\n');
+  assert.equal(v.stdout, `${version}\n`);
 });
 
 test('--tui refuses without a terminal, before any request', async () => {
