@@ -131,8 +131,11 @@ types:
           "Upfront","Upfront reservation fee"]}}}]}
 ```
 
-The candidate query and the tag queries (step 5) use the `Not` expression on its own, so the
-untagged share is usage only, like FOCUS tag coverage.
+The candidate query uses the `Not` expression on its own. The tag queries (step 5) also leave out
+`SavingsPlanNegation`, `Tax`, `Credit` and `Refund`, which never carry a tag, and use `AmortizedCost`,
+so the untagged share is usage only, like FOCUS tag coverage. Under UnblendedCost, Savings Plan
+covered usage keeps its on-demand rate while its untagged negation row takes the whole discount to
+the untagged side, which can make the share negative.
 
 Typical run: 4-10 billed requests, more on organisation accounts with many services. `--help` and `--dry-run` state the price; every output states
 the actual count and cost.
@@ -308,7 +311,8 @@ Each adapted file names its origin path and the Plutus commit in a header commen
   asking for it beside UnblendedCost costs no extra request. It is not used: it folds the fees into
   the usage they cover, which would empty the commitments category and change every total away from
   the bill, it does nothing for tax, and FOCUS and the AI sources have no equivalent. Spreading in the
-  daily views alone works the same way for every source and leaves the totals as billed.
+  daily views alone works the same way for every source and leaves the totals as billed. The tag
+  queries are the exception, since the untagged share is a ratio, not a total.
 - **Forecast**: `forecast.js` `fitModel` and `projectPeriodTotal`, unchanged, over the daily
   total of every kind with monthly charges spread (above). Gives the month-end projection, whose
   month to date stays as billed, and a 14-day dashed extension on the daily chart. No band.

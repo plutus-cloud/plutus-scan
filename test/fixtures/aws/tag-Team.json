@@ -14,7 +14,7 @@
             "Team$"
           ],
           "Metrics": {
-            "UnblendedCost": {
+            "AmortizedCost": {
               "Amount": "40",
               "Unit": "USD"
             }
@@ -25,7 +25,7 @@
             "Team$web"
           ],
           "Metrics": {
-            "UnblendedCost": {
+            "AmortizedCost": {
               "Amount": "60",
               "Unit": "USD"
             }
