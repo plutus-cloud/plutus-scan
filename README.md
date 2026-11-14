@@ -202,6 +202,16 @@ For one of them, gp2 volumes, Plutus can open a pull request against your Terraf
 
 plutus-scan is a snapshot of one bill, taken once. [Plutus](https://plutus-cloud.com/?utm_source=plutus-scan&utm_medium=readme) tracks the same spend daily, per team and per customer, with alerts, and is where the questions this tool leaves open get answered: who owns this AI project, is this candidate actually waste, what happens tomorrow. plutus-scan has no paid tier, license key or upload step, and works fully without it. The pull-request line on the gp2 candidate, and the link in the footer of every HTML and Markdown report, are the same kind of pointer: a link you can follow or ignore, never a request plutus-scan makes. It still never contacts plutus-cloud.com.
 
+## Releasing
+
+Releases are published to npm by [`.github/workflows/release.yml`](.github/workflows/release.yml) when a GitHub release is published, not from a laptop.
+
+1. Bump `version` in `package.json` and `package-lock.json` with `npm version 0.1.1 --no-git-tag-version`, open a pull request and merge it to `main`.
+2. On GitHub, draft a new release from `main` with a new tag named `v` plus the version (`v0.1.1`), write the notes and publish it. A version with a suffix such as `0.2.0-rc.1` is published under the npm `next` tag instead of `latest`.
+3. The workflow checks that the tag matches `package.json`, runs `npm ci` and `npm test`, checks that the tarball holds only `bin`, `src`, `LICENSE`, `package.json` and `README.md`, and publishes with provenance. If any check fails nothing is published: fix it, delete the release and its tag, and publish again.
+
+One-time setup: the workflow uses npm trusted publishing, so there is no npm token to store. On npmjs.com, under the package's Settings, add a trusted publisher for GitHub Actions with organization `plutus-cloud`, repository `plutus-scan`, workflow `release.yml` and environment `npm`. Once a release has gone out that way, you can set the package's publishing access to require two-factor authentication and disallow tokens.
+
 ## License
 
 MIT. See `LICENSE`. The FOCUS sample used as a test fixture is CC BY 4.0, credited in `test/fixtures/focus/official-sample.NOTICE.md`.

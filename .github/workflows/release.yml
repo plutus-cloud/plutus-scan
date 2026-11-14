@@ -1,0 +1,76 @@
+# Publishes the package to npm when a GitHub release is published. It authenticates with npm trusted
+# publishing (OIDC): there is no npm token in the repo, and npm attaches a provenance statement that
+# links the tarball to this workflow run. The one-time setup is in the Releasing section of README.md.
+name: release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    # The npm trusted publisher is tied to this environment name, so a workflow run outside it
+    # cannot publish. Add required reviewers to the environment on GitHub for a manual gate.
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write # lets npm exchange a GitHub OIDC token for a short-lived publish credential
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # Trusted publishing needs npm 11.5.1 or later, which Node 24 ships with.
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+
+      - name: Check the release tag matches package.json
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "$TAG" != "v$version" ]; then
+            echo "::error::Release tag '$TAG' does not match package.json version '$version'. Tag the release 'v$version', or bump the version in package.json first."
+            exit 1
+          fi
+
+      - run: npm ci
+      - run: npm test
+
+      - name: Check the tarball holds only what files allows
+        run: |
+          npm pack --dry-run --json > pack.json
+          node --input-type=module -e '
+            import { readFileSync } from "node:fs";
+            // npm 11 prints an array of packages, npm 12 an object keyed by package name.
+            const out = JSON.parse(readFileSync("pack.json", "utf8"));
+            const { files } = Array.isArray(out) ? out[0] : Object.values(out)[0];
+            const allowed = (p) =>
+              ["package.json", "README.md", "LICENSE"].includes(p) ||
+              p.startsWith("bin/") || p.startsWith("src/");
+            const stray = files.map((f) => f.path).filter((p) => !allowed(p));
+            for (const p of ["package.json", "README.md", "LICENSE", "bin/plutus-scan.js"]) {
+              if (!files.some((f) => f.path === p)) stray.push(`missing: ${p}`);
+            }
+            if (stray.length) {
+              console.error("::error::Unexpected tarball contents:\n" + stray.join("\n"));
+              process.exit(1);
+            }
+            console.log(`Tarball holds ${files.length} files, all allowed.`);
+          '
+          rm pack.json
+
+      - name: Publish
+        env:
+          VERSION_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          # A prerelease version such as 0.2.0-rc.1 goes to the "next" dist-tag so it never becomes latest.
+          case "$VERSION_TAG" in
+            *-*) npm publish --provenance --access public --tag next ;;
+            *) npm publish --provenance --access public ;;
+          esac
