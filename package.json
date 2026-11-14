@@ -1,6 +1,6 @@
 {
   "name": "plutus-scan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero-setup CLI that reports what changed in a cloud or AI bill",
   "keywords": [
     "finops",
