@@ -204,13 +204,14 @@ plutus-scan is a snapshot of one bill, taken once. [Plutus](https://plutus-cloud
 
 ## Releasing
 
-Releases are published to npm by [`.github/workflows/release.yml`](.github/workflows/release.yml) when a GitHub release is published, not from a laptop.
+Releases are built and uploaded to npm by [`.github/workflows/release.yml`](.github/workflows/release.yml) when a GitHub release is published, not from a laptop. The workflow only stages the version; a maintainer makes it public with 2FA.
 
 1. Bump `version` in `package.json` and `package-lock.json` with `npm version 0.1.1 --no-git-tag-version`, open a pull request and merge it to `main`.
 2. On GitHub, draft a new release from `main` with a new tag named `v` plus the version (`v0.1.1`), write the notes and publish it. A version with a suffix such as `0.2.0-rc.1` is published under the npm `next` tag instead of `latest`.
-3. The workflow checks that the tag matches `package.json`, runs `npm ci` and `npm test`, checks that the tarball holds only `bin`, `src`, `LICENSE`, `package.json` and `README.md`, and publishes with provenance. If any check fails nothing is published: fix it, delete the release and its tag, and publish again.
+3. The workflow checks that the tag matches `package.json`, runs `npm ci` and `npm test`, checks that the tarball holds only `bin`, `src`, `LICENSE`, `package.json` and `README.md`, and stages it on npm with provenance (`npm stage publish`). If any check fails nothing is staged: fix it, delete the release and its tag, and publish again.
+4. Approve it from a machine signed in to npm with 2FA: `npm stage list plutus-scan` shows the staged version and its id, `npm stage download <stage-id>` fetches the tarball if you want to inspect it, and `npm stage approve <stage-id>` publishes it. `npm stage reject <stage-id>` throws it away. The staging commands need npm 12 or later.
 
-One-time setup: the workflow uses npm trusted publishing, so there is no npm token to store. On npmjs.com, under the package's Settings, add a trusted publisher for GitHub Actions with organization `plutus-cloud`, repository `plutus-scan`, workflow `release.yml` and environment `npm`. Once a release has gone out that way, you can set the package's publishing access to require two-factor authentication and disallow tokens.
+One-time setup: the workflow uses npm trusted publishing, so there is no npm token to store. On npmjs.com, under the package's Settings, add a trusted publisher for GitHub Actions with organization `plutus-cloud`, repository `plutus-scan`, workflow `release.yml` and environment `npm`, and leave the options to publish directly and to manage dist-tags unchecked, so the workflow can only stage. Then set the package's publishing access to require two-factor authentication and disallow tokens.
 
 ## License
 

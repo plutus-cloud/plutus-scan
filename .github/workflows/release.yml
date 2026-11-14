@@ -1,6 +1,7 @@
-# Publishes the package to npm when a GitHub release is published. It authenticates with npm trusted
-# publishing (OIDC): there is no npm token in the repo, and npm attaches a provenance statement that
-# links the tarball to this workflow run. The one-time setup is in the Releasing section of README.md.
+# Stages the package on npm when a GitHub release is published; a maintainer then approves it with
+# 2FA to make it public. It authenticates with npm trusted publishing (OIDC): there is no npm token in
+# the repo, and npm attaches a provenance statement that links the tarball to this workflow run. The
+# one-time setup is in the Releasing section of README.md.
 name: release
 
 on:
@@ -23,7 +24,6 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      # Trusted publishing needs npm 11.5.1 or later, which Node 24 ships with.
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
@@ -65,12 +65,18 @@ jobs:
           '
           rm pack.json
 
-      - name: Publish
+      # npm stage publish is newer than the npm bundled with Node 24, so pin a version that has it.
+      - run: npm install --global npm@12.0.2
+
+      - name: Stage the publish
         env:
           VERSION_TAG: ${{ github.event.release.tag_name }}
         run: |
+          # This uploads the version without making it public. A maintainer then approves it with 2FA
+          # (npm stage approve), so a run that is not a real release can never ship on its own.
           # A prerelease version such as 0.2.0-rc.1 goes to the "next" dist-tag so it never becomes latest.
           case "$VERSION_TAG" in
-            *-*) npm publish --provenance --access public --tag next ;;
-            *) npm publish --provenance --access public ;;
+            *-*) npm stage publish --provenance --access public --tag next ;;
+            *) npm stage publish --provenance --access public ;;
           esac
+          echo "Staged. Approve it with: npm stage list plutus-scan, then npm stage approve <stage-id>"
