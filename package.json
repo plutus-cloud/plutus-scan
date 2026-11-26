@@ -38,6 +38,6 @@
     "node": ">=20"
   },
   "dependencies": {
-    "hyparquet": "1.33.0"
+    "hyparquet": "1.33.1"
   }
 }
